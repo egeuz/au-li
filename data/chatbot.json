@@ -1,0 +1,117 @@
+[
+  {
+    "keywords": [
+      "hey",
+      "heya",
+      "hello",
+      "hi",
+      "goodbye",
+      "bye",
+      "how are you",
+      "how's it going"
+    ],
+    "animation_cue": 0,
+    "dancer_cue": 0,
+    "modal_cue": ""
+  },
+  {
+    "keywords": [
+      "what do you think",
+      "opinion",
+      "rip",
+      "torn",
+      "smash",
+      "splat",
+      "broke",
+      "broken",
+      "economy",
+      "rich",
+      "poor",
+      "middle",
+      "class"
+    ],
+    "animation_cue": 1,
+    "dancer_cue": 0,
+    "modal_cue": ""
+  },
+  {
+    "keywords": [
+      "human",
+      "bot",
+      "simulation",
+      "simulate",
+      "fake",
+      "real",
+      "are you there",
+      "joke",
+      "joking",
+      "laugh",
+      "ridiculous",
+      "irony",
+      "ironic",
+      "brain",
+      "think",
+      "philosophy",
+      "philosopher",
+      "theory",
+      "being",
+      "theoretical",
+      "theme",
+      "thinker",
+      "walk",
+      "walking",
+      "stroll",
+      "exercise",
+      "exertion",
+      "trail",
+      "hike",
+      "hiking"
+    ],
+    "animation_cue": 2,
+    "dancer_cue": 1,
+    "modal_cue": ""
+  },
+  {
+    "keywords": [
+      "water",
+      "ocean",
+      "river",
+      "lake",
+      "h2o",
+      "tears",
+      "crying",
+      "cry",
+      "wet",
+      "moisture",
+      "precipitation",
+      "rain",
+      "snow",
+      "storm",
+      "hurrican",
+      "flood"
+    ],
+    "animation_cue": 3,
+    "dancer_cue": "",
+    "modal_cue": 0
+  },
+  {
+    "keywords": [
+      "why",
+      "air",
+      "breathing",
+      "breath",
+      "airy",
+      "particles",
+      "tornado"
+    ],
+    "animation_cue": 4,
+    "dancer_cue": "",
+    "modal_cue": ""
+  },
+  {
+    "keywords": ["fuck", "shit", "all", "curse", "words"],
+    "animation_cue": 5,
+    "dancer_cue": "",
+    "modal_cue": ""
+  }
+]

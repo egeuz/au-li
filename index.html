@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- PROTOTYPE SCAFFOLDING -->
+    <!-- PROTOTYPE SCAFFOLDING: HEADER AREA -->
     <header></header>
     <main>
       <section id="info">
+        <!-- PROTOTYPE SCAFFOLDING: TITLE CARD-->
         <div id="proto-title-card">
           <h2>Gold Loop Bot</h2>
           <a class="author-link" href="#notareallink">Jen Liu</a>
         </div>
+        <!-- ABOUT -->
         <div id="about-text">
           <p>
             Do you have questions? Au-Li has answers. She is lithiated gold
@@ -49,27 +51,22 @@
           >
           <span>— Medical account of acute lithium poisoning, 2018</span>
         </div>
-        <div id="dancer-video">
-          <img
-            id="dancer-placeholder"
-            src="assets/placeholders/dancer-placeholder.png"
-            alt="dancer placeholder"
-          />
-        </div>
+        <!-- DANCER VIDEO -->
+        <div id="dancer"></div>
+        <!-- end dancer video-->
       </section>
       <section id="interface">
-        <div id="au-li">
-          <img
-            id="bot-placeholder"
-            src="assets/placeholders/bot-placeholder.png"
-            alt="bot placeholder"
-          />
-          <div id="proto-aq-preview">
-            <h3></h3>
+        <div id="chatbot">
+          <div id="au-li"></div>
+          <div id="chat">
+            <input id="chat-input" type="text" />
           </div>
         </div>
-        <div id="chat">
-          <input id="chat-input" type="text" />
+        <div id="modal">
+          <div id="modal-toolbar">
+            <button id="modal-close-button">x</button>
+          </div>
+          <div id="modal-content">hi am content</div>
         </div>
       </section>
     </main>

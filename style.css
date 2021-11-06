@@ -80,32 +80,23 @@ span {
   overflow-y: scroll;
 }
 
-#dancer-video {
+#dancer {
   display: flex;
   align-items: flex-end;
 }
 
-#dancer-video img {
+#dancer video {
   width: 100%;
+}
+
+#interface {
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
 /*** BOT ***/
-#au-li {
-  position: relative;
-}
-
-#proto-aq-preview {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#au-li img {
+#au-li video {
   width: 100%;
 }
 
@@ -120,6 +111,42 @@ span {
   min-width: 300px;
   font-family: "Favorit Trial", sans-serif;
   padding: 0.25rem 0.5rem;
+}
+
+/*** MODAL ***/
+#modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  max-width: 800px;
+  bottom: 2rem;
+  right: 2rem;
+  border: 2px solid #8F7D3E;
+}
+
+#modal.open {
+  display: block;
+}
+
+#modal-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  background: #000;
+}
+
+
+#article-spread-container {
+  width: 100%;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: scroll;
+  background: #000;
+}
+
+#article-spread {
+  width: 100%;
 }
 
 /*** MOBILE STYLES ***/
@@ -161,5 +188,15 @@ span {
 
   #interface {
     padding: 4rem 0 8rem;
+  }
+
+  #modal {
+    left: 0;
+    top: 10vh;
+  }
+
+  #article-spread-container {
+    height: 80vh;
+    max-height: none;
   }
 }
