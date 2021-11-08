@@ -9,17 +9,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- PROTOTYPE SCAFFOLDING: HEADER AREA -->
-    <header></header>
-    <main>
-      <section id="info">
-        <!-- PROTOTYPE SCAFFOLDING: TITLE CARD-->
-        <div id="proto-title-card">
+    <div id="auli">
+      <div id="auli-info">
+        <div id="auli-title-card">
           <h2>Gold Loop Bot</h2>
-          <a class="author-link" href="#notareallink">Jen Liu</a>
+          <a class="author-link" href="#testlink">Jen Liu</a>
         </div>
-        <!-- ABOUT -->
-        <div id="about-text">
+        <div id="auli-about">
           <p>
             Do you have questions? Au-Li has answers. She is lithiated gold
             microparticles for your localized inquiries. Please use the provided
@@ -51,25 +47,40 @@
           >
           <span>— Medical account of acute lithium poisoning, 2018</span>
         </div>
-        <!-- DANCER VIDEO -->
-        <div id="dancer"></div>
-        <!-- end dancer video-->
-      </section>
-      <section id="interface">
-        <div id="chatbot">
-          <div id="au-li"></div>
-          <div id="chat">
-            <input id="chat-input" type="text" />
+        <div id="auli-dancer">
+          <div class="auli-video-container">
+            <video
+              src="assets/videos/dancer_01_swaying.mp4"
+              muted
+              autoplay
+              loop
+            ></video>
           </div>
         </div>
-        <div id="modal">
-          <div id="modal-toolbar">
-            <button id="modal-close-button">x</button>
-          </div>
-          <div id="modal-content">hi am content</div>
+      </div>
+      <div id="auli-interface">
+        <div id="auli-reset">
+          <button></button>
         </div>
-      </section>
-    </main>
+        <div id="auli-chatbot">
+          <div id="auli-animation">
+            <div class="auli-video-container">
+              <video
+                src="./assets/animations/01_breathe.mp4"
+                muted
+                autoplay
+                loop
+              ></video>
+            </div>
+          </div>
+          <div id="auli-message-box">
+            <input type="text" autocomplete="off" />
+          </div>
+        </div>
+        <div class="auli-modal" id="auli-modal-1"></div>
+        <div class="auli-modal" id="auli-modal-2"></div>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

@@ -1,199 +1,280 @@
-/*** GLOBAL VARS ***/
-// html elements
-const chatInput = document.querySelector('#chat input');
-const animationContainer = document.querySelector('#au-li');
-const dancerContainer = document.querySelector('#dancer');
-const modal = document.querySelector('#modal');
-const modalContent = document.querySelector('#modal-content');
-const modalCloseButton = document.querySelector('#modal-close-button');
-// video management
-let currentAnimation = 0;
-let currentDancer = 0;
-const ANIMATION_FILENAMES = [
-  './assets/animations/01_breathe.mp4',
-  './assets/animations/02_bounce.mp4',
-  './assets/animations/03_breakapart.mp4',
-  './assets/animations/04_reset.mp4',
-  './assets/animations/05_OK.mp4',
-  './assets/animations/06_eyeball.mp4'
-];
-const DANCER_FILENAMES = [
-  './assets/videos/dancer_00_pacing.mp4',
-  './assets/videos/dancer_02_confused_waiting.mp4'
-];
-const ANIMATION_VIDEOS = preloadVideoElements(ANIMATION_FILENAMES);
-const IDLE_ANIMATION = ANIMATION_VIDEOS[0];
-const DANCER_VIDEOS = preloadVideoElements(
-  DANCER_FILENAMES,
-  { showControls: true, loop: true }
-);
-const IDLE_DANCER = DANCER_VIDEOS[0];
-// modal management
-const articleSpreadModal = `
-<div id="article-spread-container">
-  <img 
-    id="article-spread"
-    src="./assets/modal/article_spread_800p.png"
-    alt="articles on the environmental costs of lithium"
-  >
-</div>
-`;
-const MODAL_CONTENT_SETS = [
-  articleSpreadModal
-];
-let modalIsOpen = false;
-let currentModal;
+/***************/
+/*** GLOBALS ***/
+/***************/
+let responseSets, assets; //read-only
+let scrollLoopInterval; //scroll loop handler
+const SCROLL_SPEED = 50;
 
+/*********************/
+/*** HTML ELEMENTS ***/
+/*********************/
+const AULI_ANIMATION = document.querySelector('#auli-animation');
+const AULI_DANCER = document.querySelector('#auli-dancer');
+const AULI_MODAL_1 = document.querySelector('#auli-modal-1');
+const AULI_MODAL_2 = document.querySelector('#auli-modal-2');
+const CHAT_INPUT = document.querySelector('#auli-message-box input');
+const RESET_BUTTON = document.querySelector('#auli-reset button');
+/***************/
 /*** RUNTIME ***/
+/***************/
 (async () => {
-  // retrieve operational data
-  const animations = await fetchData();
-  // begin idle video loops
-  playIdleVideo(animationContainer, ANIMATION_VIDEOS[0]);
-  playIdleVideo(dancerContainer, DANCER_VIDEOS[0]);
-  // set up message submission on [ENTER] press
-  window.addEventListener('keyup', event => {
-    handleMessageInput(event, animations)
-  });
-  // set up modal mechanics
-  modalCloseButton.addEventListener('click', closeModal);
+  // chat logic + assets
+  responseSets = await initChatbot();
+  assets = initAssets();
+  // user interactions
+  window.addEventListener('keyup', handleKeyboardShortcuts);
+  RESET_BUTTON.addEventListener('click', playResetResponse);
+  CHAT_INPUT.focus();
 })();
 
+/*****************/
 /*** FUNCTIONS ***/
-async function fetchData() {
-  const url = './data/chatbot.json';
-  const res = await fetch(url);
-  const data = await res.json();
-  return data;
+/*****************/
+
+/*** INITIALIZING CONTENT ***/
+async function initChatbot() {
+  const dataURL = './data/chatbot.json';
+  const res = await fetch(dataURL);
+  const raw = await res.json();
+  const data = raw.map(set => ({
+    ...set,
+    keywords: set.keywords &&
+      set.keywords.split(', ')
+  }));
+  return await data;
 }
 
-function preloadVideoElements(filenames, opts) {
-  return filenames
-    .map(filename => {
-      const video = document.createElement('video');
-      video.playsInline = true;
-      video.muted = true;
-      video.controls = Boolean(opts && opts.showControls && opts.showControls);
-      video.loop = opts && opts.loop && opts.loop;
-      video.preload = 'auto';
-      video.src = filename;
-      video.load();
-      return video;
-    });
-}
-
-function handleMessageInput(event, animations) {
-  if (
-    event.code === 'Enter' &&
-    document.activeElement === chatInput
-  ) {
-    const msg = ` ${chatInput.value.toLowerCase()} `;
-    const responseQueue = generateResponseQueue(msg, animations);
-    if (responseQueue.length > 0) {
-      playResponseQueue(responseQueue);
-    }
-    chatInput.value = ''; // reset input box?
+function initAssets() {
+  return {
+    ...preloadVideos(),
+    ...preloadImages(),
+    ...generateHTMLContent()
   }
 }
 
-function generateResponseQueue(msg, anims) {
-  const queue = [];
-  anims.forEach(({ keywords, animation_cue, dancer_cue, modal_cue }) => {
-    keywords.forEach(keyword => {
-      if (msg.includes(keyword))
-        queue.push({
-          keyword,
-          animation_cue,
-          dancer_cue,
-          modal_cue,
-          index: msg.indexOf(keyword)
-        });
-    });
+function preloadVideos() {
+  const videos = {};
+  responseSets.forEach(set => { // parse video filenames found in chatbot system
+    Object.entries(set)
+      .forEach(([key, val]) => {
+        if (
+          key !== "keywords" && val &&
+          (val.type === 'video' || key === 'animation')
+        ) {
+          const dir = key === 'animation' ? 'animations' : 'videos';
+          const filename = key === 'animation' ? val : val.content;
+          const id = key === 'animation' ? val : val.id;
+          //generate video element
+          const videoURL = `./assets/${dir}/${filename}`;
+          const video = document.createElement('video');
+          video.src = videoURL;
+          video.playsInline = true;
+          video.loop = false;
+          video.preload = 'auto';
+          video.load();
+          const videoContainer = document.createElement('div');
+          videoContainer.classList.add('auli-video-container');
+          videoContainer.appendChild(video);
+          videos[id] = videoContainer;
+        }
+      });
   });
-  return queue
+  return videos;
+}
+
+function preloadImages() {
+  const images = {};
+  responseSets.forEach(set => {
+    Object.entries(set)
+      .forEach(([key, val]) => {
+        if (key !== "keywords" && val && val.type === 'image') {
+          const image = new Image();
+          image.src = `./assets/images/${val.content}`;
+          const imageContainer = document.createElement('div');
+          imageContainer.classList.add('auli-image-container');
+          imageContainer.appendChild(image);
+          images[val.id] = imageContainer;
+        }
+      })
+  });
+  return images;
+}
+
+function generateHTMLContent() {
+  const htmlNodes = {};
+  responseSets.forEach(set => {
+    Object.entries(set)
+      .forEach(([key, val]) => {
+        if (
+          key !== 'keywords' && val &&
+          (val.type === 'text' || val.type === 'scroll-loop')
+        ) {
+          const container = document.createElement('div');
+          container.classList.add(val.type);
+          if (val.background_image) {
+            console.log('yo');
+            bgURL = `./assets/images/${val.background_image}`;
+            container.style.backgroundImage = `url(${bgURL})`;
+          }
+          container.innerHTML = val.content;
+          htmlNodes[val.id] = container;
+        }
+      });
+  });
+  return htmlNodes;
+}
+//end init content
+
+
+/*** INTERACTION HANDLERS ***/
+function handleKeyboardShortcuts(event) {
+  // send message in input when enter is pressed
+  if (
+    event.code === 'Enter' &&
+    document.activeElement === CHAT_INPUT
+  ) {
+    processUserMessage();
+  }
+}
+
+// when user sends message, process it
+// prepare then play responses triggered by keywords
+function processUserMessage() {
+  const msg = CHAT_INPUT.value.toLowerCase();
+  const rq = generateResponseQueue(msg);
+  if (rq.length > 0) playResponseQueue(rq); //begin responding
+  CHAT_INPUT.value = ''; //reset input area;
+}
+// end interaction handlers
+
+/*** CHATBOT RESPONSE SYSTEM ***/
+function generateResponseQueue(message) {
+  const queue = [];
+  responseSets.forEach(({
+    keywords, animation, dancer, modal1, modal2
+  }) => {
+    if (keywords) {
+      keywords.forEach(keyword => {
+        if (message.includes(keyword)) {
+          const response = {
+            animation,
+            dancer,
+            modal1,
+            modal2,
+            keyword, //TODO: delete for prod
+            inputIndex: message.indexOf(keyword) //TODO: delete for prod
+          }
+          const animationIsInQueue = queue.find(r => r.animation === animation);
+          if (!animationIsInQueue) queue.push(response);
+        }
+      });
+    }
+  });
+  return [...new Set(queue
     .sort((a, b) =>
-      a.index - b.index
-    );
+      b.inputIndex - a.inputIndex //respond from end of sentence
+    ))];
 }
 
 function playResponseQueue(queue) {
-  //weird recursive boi
-  const { animation_cue, dancer_cue, modal_cue } = queue.shift();
-  if (
-    (animation_cue || animation_cue === 0) &&
-    animation_cue !== currentAnimation
-  ) {
-    resetIdleLoop();
-    const nextAnimation = ANIMATION_VIDEOS[animation_cue];
-    playAnimation(nextAnimation, queue, animation_cue);
-  }
-  if (
-    (dancer_cue || dancer_cue === 0) &&
-    dancer_cue !== currentDancer
-  ) {
-    const nextDancerVideo = DANCER_VIDEOS[dancer_cue];
-    setAndPlayDancerVideo(nextDancerVideo, dancer_cue);
-  }
-  if (
-    (modal_cue || modal_cue === 0) &&
-    modal_cue !== currentModal &&
-    !modalIsOpen
-  ) {
-    openModal(modal_cue);
-  }
-}
-
-function playAnimation(animation, queue, i) {
+  console.log([...queue]);
+  // recursively run function at the end of each video to play out full sequence
   const handleVideoEnd = event => {
     if (queue.length > 0) {
-      playResponseQueue(queue)
+      playResponseQueue(queue) // continue recursion
     } else {
-      //end recursion
-      playIdleVideo(animationContainer, ANIMATION_VIDEOS[0]);
-      event.target.removeEventListener('ended', handleVideoEnd);
+      returnToIdleState(); // end recursion
+      event.target.removeEventListener('ended', handleVideoEnd); //cleanup
     }
   }
-  animationContainer.innerHTML = '';
-  animationContainer.appendChild(animation);
-  animation.addEventListener('ended', handleVideoEnd);
-  currentAnimation = i;
-  animation.play();
+  resetScrollLoop(); // reset ongoing text animations
+  // get next response set
+  const { animation, dancer, modal1, modal2 } = queue.shift();
+  if (animation) {
+    const asset = assets[animation];
+    const video = asset.querySelector('video');
+    video.addEventListener('ended', handleVideoEnd);
+    renderAsset(AULI_ANIMATION, asset);
+  }
+  if (dancer) {
+    renderAsset(AULI_DANCER, assets[dancer.id], { loop: true, muted: true });
+  }
+  if (modal1) {
+    AULI_MODAL_1.classList.add('open');
+    renderAsset(AULI_MODAL_1, assets[modal1.id]);
+  }
+  if (modal2) {
+    AULI_MODAL_2.classList.add('open');
+    renderAsset(AULI_MODAL_2, assets[modal2.id]);
+  }
+  // if (modal1) setModal1Content(modal1);
+  // if (modal2) setModal2Content(modal2);
 }
 
-function setAndPlayDancerVideo(dancerVideo, i) {
-  dancerContainer.innerHTML = '';
-  dancerContainer.appendChild(dancerVideo);
-  dancerVideo.loop = true;
-  currentDancer = i;
-  dancerVideo.play();
-}
+// end chatbot response system
 
-// set idle mode videos
-function playIdleVideo(container, idleVideo) {
+/*** ASSET RENDERING ***/
+function renderAsset(container, asset, opts) {
   container.innerHTML = '';
-  container.appendChild(idleVideo);
-  idleVideo.loop = true;
-  currentAnimation = 0;
-  idleVideo.play();
+  container.appendChild(asset);
+  if (asset.classList.contains('auli-video-container')) {
+    const video = asset.querySelector('video');
+    video.loop = opts && Boolean(opts.loop);
+    video.muted = opts && Boolean(opts.muted);
+    video.play();
+  } else if (asset.classList.contains('scroll-loop')) {
+    asset.scrollTop = 0;
+    scrollLoopInterval = setInterval(() => {
+      handleScrollLoop(asset)
+    }, SCROLL_SPEED);
+  } else if (asset.classList.contains('text')) {
+
+  }
 }
 
-// cleanup after exiting idle state
-function resetIdleLoop() {
-  ANIMATION_VIDEOS[0].loop = false;
+// scroll loop animation
+function handleScrollLoop(element) {
+  // const sh = element.scrollTop;
+  element.scrollTop += 1;
+  const containerHeight = element.parentNode.getBoundingClientRect().height;
+  if (element.scrollTop + containerHeight >= element.scrollHeight) {
+    const loopContent = element.childNodes;
+    loopContent.forEach(content => {
+      element.innerHTML += content.outerHTML;
+    });
+  }
 }
 
-// modal functions
-function openModal(idx) {
-  modalIsOpen = true;
-  currentModal = idx;
-  newModalContent = MODAL_CONTENT_SETS[idx];
-  modalContent.innerHTML = newModalContent;
-  modal.classList.add('open');
+function resetScrollLoop() {
+  clearInterval(scrollLoopInterval);
 }
 
-function closeModal() {
-  modalIsOpen = false;
-  currentModal = '';
-  modalContent.innerHTML = '';
-  modal.classList.remove('open');
- }
+// reset button handling
+function playResetResponse() {
+  const resetResponse = responseSets
+    .find(rs => rs.status === 'reset');
+  playResponseQueue([{ ...resetResponse }]);
+  resetModals();
+}
+
+// set back to idle mode || end of response queue
+function returnToIdleState() {
+  // retrieve idle response set
+  const { animation } = responseSets
+    .find(rs => rs.status === 'idle');
+  // reset videos to default loop
+  renderAsset(
+    AULI_ANIMATION,
+    assets[animation],
+    { loop: true }
+  );
+}
+
+function resetModals() {
+  document
+    .querySelectorAll('.auli-modal')
+    .forEach(modal => {
+      modal.classList.remove('open');
+      modal.innerHTML = '';
+    })
+}

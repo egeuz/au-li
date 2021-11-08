@@ -1,117 +1,146 @@
 [
   {
-    "keywords": [
-      "hey",
-      "heya",
-      "hello",
-      "hi",
-      "goodbye",
-      "bye",
-      "how are you",
-      "how's it going"
-    ],
-    "animation_cue": 0,
-    "dancer_cue": 0,
-    "modal_cue": ""
+    "keywords": "hey, heya, hello, hi, bye, how, what's, up, going, yo",
+    "animation": "01_breathe.mp4",
+    "dancer": {
+      "type": "video",
+      "id": "dancer00",
+      "content": "dancer_00_pacing.mp4"
+    },
+    "modal1": {
+      "type": "text",
+      "id": "set1text",
+      "content": "<p>hello</p>"
+    },
+    "modal2": {
+      "type": "text",
+      "id": "set1text2",
+      "content": "<p style='font-size:2rem;'>👋</p>",
+      "placeholder": true
+    }
   },
   {
-    "keywords": [
-      "what do you think",
-      "opinion",
-      "rip",
-      "torn",
-      "smash",
-      "splat",
-      "broke",
-      "broken",
-      "economy",
-      "rich",
-      "poor",
-      "middle",
-      "class"
-    ],
-    "animation_cue": 1,
-    "dancer_cue": 0,
-    "modal_cue": ""
+    "keywords": "what do you think, opinion, rip, torn, smash, splat, broke, broken, economy, rich, poor, middle, class, union, strike, resist, insurrection, break, storm, charge, attack, war, battle, fight, fist, flag, trench, cannon, combat, protest, violent, conflict, polar, expedition, colony, colonialism, confused, question, answer, resolve, dizzy, sick, delirious, faint, whelm, precarious, precarity",
+    "animation": "02_bounce.mp4",
+    "dancer": {
+      "type": "video",
+      "id": "dancer02",
+      "content": "dancer_02_waiting.mp4"
+    },
+    "modal1": {
+      "type": "text",
+      "id": "set2text",
+      "content": "....."
+    },
+    "modal2": {
+      "type": "image",
+      "id": "battery_1",
+      "content": "battery_1.gif"
+    }
   },
   {
-    "keywords": [
-      "human",
-      "bot",
-      "simulation",
-      "simulate",
-      "fake",
-      "real",
-      "are you there",
-      "joke",
-      "joking",
-      "laugh",
-      "ridiculous",
-      "irony",
-      "ironic",
-      "brain",
-      "think",
-      "philosophy",
-      "philosopher",
-      "theory",
-      "being",
-      "theoretical",
-      "theme",
-      "thinker",
-      "walk",
-      "walking",
-      "stroll",
-      "exercise",
-      "exertion",
-      "trail",
-      "hike",
-      "hiking"
-    ],
-    "animation_cue": 2,
-    "dancer_cue": 1,
-    "modal_cue": ""
+    "keywords": "",
+    "animation": "",
+    "dancer": "",
+    "modal1": "",
+    "modal2": ""
   },
   {
-    "keywords": [
-      "water",
-      "ocean",
-      "river",
-      "lake",
-      "h2o",
-      "tears",
-      "crying",
-      "cry",
-      "wet",
-      "moisture",
-      "precipitation",
-      "rain",
-      "snow",
-      "storm",
-      "hurrican",
-      "flood"
-    ],
-    "animation_cue": 3,
-    "dancer_cue": "",
-    "modal_cue": 0
+    "keywords": "",
+    "animation": "",
+    "dancer": "",
+    "modal1": "",
+    "modal2": ""
   },
   {
-    "keywords": [
-      "why",
-      "air",
-      "breathing",
-      "breath",
-      "airy",
-      "particles",
-      "tornado"
-    ],
-    "animation_cue": 4,
-    "dancer_cue": "",
-    "modal_cue": ""
+    "keywords": "why, air, breathing, breath, airy, particles, tornado, wind, wheeze, ozone, global, warming, environment, warm, disaster, ecology, ecological, nature, forest, wood, breeze, breezy, heat, desert, mirage, oven, bake, roast, cook, burnt, break, dry, dehydrate, bone, parch, crack, dust, fire, ash, crisp, flammable",
+    "animation": "05_breakapart.mp4",
+    "dancer": {
+      "type": "scroll-loop",
+      "id": "set5loop",
+      "content": "<p><a href='https://techcrunch.com/wp-content/uploads/2021/05/Employee-working-at-Spoke-1-in-Kingston-ON-1.jpg?w=730&crop=1'>Disassembly of battery packs from automotive applications</a> requires high-voltage training and insulated tools to prevent <a href='https://ohsonline.com/Articles/2004/02/Big-Batteries-Big-Electric-Shock-Potential.aspx?m=1'>electrocution of operators</a> or short-circuiting of the pack.  Short-circuiting results in rapid discharge, which may lead to heating and thermal runaway. Thermal runaway may result in the generation of particularly noxious byproducts, including <a href='https://www.cdc.gov/niosh/ershdb/emergencyresponsecard_29750030.html'>HF gas</a>, which along with other product gases may become trapped and ultimately result in <a href='https://www.chron.com/news/houston-texas/houston/article/Train-explosion-leads-to-chemical-release-in-11095738.php'>cells exploding.</a> The cells also present a chemical hazard owing to the flammable electrolyte, toxic and <a href='https://www.google.com/url?q=https://www.hopaxfc.com/en/blog/why-use-additives-for-lithium-ion-batteries&sa=D&source=editors&ust=1636345035898000&usg=AOvVaw1M1WP8xdiQ8n2dOvzIVRgU'>carcinogenic electrolyte additives,</a> and the potentially toxic or carcinogenic electrode materials.</p>"
+    },
+    "modal1": {
+      "type": "image",
+      "id": "waste",
+      "content": "waste.jpg"
+    },
+    "modal2": {
+      "type": "text",
+      "id": "set5text",
+      "content": "<p><a href='https://techcrunch.com/wp-content/uploads/2021/05/Employee-working-at-Spoke-1-in-Kingston-ON-1.jpg?w=730&crop=1'>https://techcrunch.com/wp-content/uploads/2021/05/Employee-working-at-Spoke-1-in-Kingston-ON-1.jpg?w=730&crop=1</a></p><p><a href='https://ohsonline.com/Articles/2004/02/Big-Batteries-Big-Electric-Shock-Potential.aspx?m=1'>https://ohsonline.com/Articles/2004/02/Big-Batteries-Big-Electric-Shock-Potential.aspx?m=1</a></p><p><a href='https://www.cdc.gov/niosh/ershdb/emergencyresponsecard_29750030.html'>https://www.cdc.gov/niosh/ershdb/emergencyresponsecard_29750030.html</a></p><p><a href='https://www.chron.com/news/houston-texas/houston/article/Train-explosion-leads-to-chemical-release-in-11095738.php'>https://www.chron.com/news/houston-texas/houston/article/Train-explosion-leads-to-chemical-release-in-11095738.php</a></p><p><a href='https://www.hopaxfc.com/en/blog/why-use-additives-for-lithium-ion-batteries&sa=D&source=editors&ust=1636345035898000&usg=AOvVaw1M1WP8xdiQ8n2dOvzIVRgU'>https://www.hopaxfc.com/en/blog/why-use-additives-for-lithium-ion-batteries&sa=D&source=editors&ust=1636345035898000&usg=AOvVaw1M1WP8xdiQ8n2dOvzIVRgU</a></p>"
+    }
   },
   {
-    "keywords": ["fuck", "shit", "all", "curse", "words"],
-    "animation_cue": 5,
-    "dancer_cue": "",
-    "modal_cue": ""
+    "keywords": "fuck, shit, cunt, dick, crap, stupid, boring, torture, incel, democrat, republican, demorat, moron, retard, fucktard, poop, diarrhea, vomit, puke, pee, piss, trump, biden, washington, politics, America, mandate, vaccine, apocalypse, utopia, government, transmission, mandatem, vaccine, kick, punch, slap, crash, smash, reddit, douche, stick, clown, arse, wank, crude, swear, curse, dump, turd, ass, dirt, filth, crust, abject, poverty, poor, rich, middle, class, fear, loathing, loathe, hate, disdain, terror, worry, yuck, suck, like, evil, anti",
+    "animation": "06_OK.mp4",
+    "dancer": {
+      "type": "video",
+      "id": "dancer02",
+      "content": "dancer_02_waiting.mp4",
+      "placeholder": true
+    },
+    "modal1": {
+      "type": "video",
+      "id": "optisort",
+      "content": "OPTISORT_YELLOW.mp4"
+    },
+    "modal2": {
+      "type": "text",
+      "id": "set6text",
+      "content": "<p>DIVE INTO ANYTHING YOU NOZZELLE</p>"
+    }
+  },
+  {
+    "keywords": "",
+    "animation": "",
+    "dancer": "",
+    "modal1": "",
+    "modal2": ""
+  },
+  {
+    "keywords": "",
+    "animation": "",
+    "dancer": "",
+    "modal1": "",
+    "modal2": ""
+  },
+  {
+    "keywords": "surveillance, watch, watching, brother, movie, film, therapy, entertain, ticket, research, knowledge, information, informative, learn, education, teach, student, school, class, text, book, look, stare, window, spy, stalk, follow, track, illustrate, sketch, draw, represent, paint, observe, represent, abstract, literal, copy, duplicate, xerox, again, repeat, cartoon, crayon, charcoal, pencil, gesture, art, contemporary, gallery, museum, exhibition, show, curator, install, hang, sculpture, creative, make, workshop, literature, write, writing, modern",
+    "animation": "09_eyeball.mp4",
+    "dancer": {
+      "type": "scroll-loop",
+      "id": "set9loop",
+      "background_image": "8IuC.gif",
+      "content": "<p>I get delirious whenever you're near</p><p>Lose all self-control, baby just can't steer</p><p>Wheels get locked in place</p><p>Stupid look on my face</p><p>It comes to making a pass, pretty mama</p><p>I just can't win a race</p><p>I get delirious when you hold my hand</p><p>Body gets so weak I can hardly stand</p><p>My temperature's running hot</p><p>Baby you got to stop</p><p>Because if you don't, I'm going to explode</p><p>And girl I got a lot</p><p>I get delirious whenever you're near</p><p>Girl you gotta take control because I just can't steer</p><p>You're just too much to take</p><p>I can't stop, I ain't got no brakes</p><p>Girl you got to take me for a little ride up and down</p><p>In and out and around your lake</p>"
+    },
+    "modal1": {
+      "type": "text",
+      "id": "set9text",
+      "content": "<p>I LOVE YOU SO MUCH I WANT TO SKIN YOU ALIVE AND THEN WEAR YOUR SKIN SO I'LL BE INSIDE YOU</p>"
+    },
+    "modal2": {
+      "type": "video",
+      "id": "seeyouagainpink",
+      "content": "SEE_YOU_AGAIN_PINK.mp4"
+    }
+  },
+  {
+    "status": "reset",
+    "animation": "10_reset.mp4",
+    "dancer": {
+      "type": "video",
+      "id": "dancer01",
+      "content": "dancer_01_swaying.mp4"
+    },
+    "modal1": "",
+    "modal2": ""
+  },
+  {
+    "status": "idle",
+    "animation": "01_breathe.mp4",
+    "dancer": "",
+    "modal1": "",
+    "modal2": ""
   }
 ]

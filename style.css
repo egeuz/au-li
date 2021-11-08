@@ -1,73 +1,98 @@
-/*** BASE STYLES ***/
-/* layout styles */
-body {
-  margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 0.24fr 0.76fr;
+/*******************/
+/*** TEXT STYLES ***/
+/*******************/
+#auli p,
+#auli q,
+#auli span {
+  font-family: "Favorit", sans-serif;
+  font-size: 1rem;
+  line-height: 1.15;
 }
 
-main {
-  background: #000;
-  color: #fae1d3;
-  display: grid;
-  grid-template-columns: 0.34fr 0.66fr;
-  height: 100%;
+#auli a {
+  color: inherit;
+  text-decoration: underline;
 }
 
-header {
-  background: #fae1d3;
-}
-
-/* text styles */
-p,
-q,
-span,
-input {
-  line-height: 115%;
-  font-size: 1.125rem;
-  margin: 1rem 0;
-  font-family: "Favorit Trial", sans-serif;
-}
-
-h2 {
-  font-family: "Garamond Trial", serif;
+#auli h2 {
+  font-family: "ITC Garamond Narrow", serif;
   font-size: 3rem;
   margin: 0;
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-h3 {
-  font-family: "Garamond Trial", serif;
-  font-size: 2rem;
+#auli input {
+  font-family: "Favorit", sans-serif;
+  font-size: 1.125rem;
+  background: #000;
+  color: inherit;
+  border: 2px solid #8f7d3e;
+  /* TODO: modify input outline on focus */
+}
+
+/**************/
+/*** LAYOUT ***/
+/**************/
+body {
   margin: 0;
-  margin-bottom: 0.5rem;
 }
 
-span {
-  display: block;
-  padding-left: 1rem;
-  max-width: 250px;
+#auli {
+  background: #000;
+  color: #fae1d3;
 }
 
-/*** INFO ***/
-#info {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+#auli-interface {
+  flex-grow: 1;
+  min-height: 100vh;
 }
 
-#proto-title-card {
+/* tablet layout */
+@media screen and (min-width: 769px) {
+  #auli-info {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+/* desktop+ layout */
+@media screen and (min-width: 1024px) {
+  #auli {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+
+  #auli-info {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #auli-interface {
+    position: relative;
+  }
+}
+
+/******************/
+/*** COMPONENTS ***/
+/******************/
+#auli video {
+  width: 100%;
+}
+
+#auli-title-card {
   padding: 2rem;
   text-align: center;
 }
 
-#proto-title-card a {
+#auli-title-card a {
   border: solid 1px #fae1d3;
   border-radius: 5px;
   display: inline-block;
-  padding: 4px 18px 8px;
+  padding: 8px 18px;
   font-size: 2rem;
   line-height: 90%;
   font-family: "Garamond Trial", serif;
@@ -75,128 +100,160 @@ span {
   color: inherit;
 }
 
-#about-text {
-  padding: 0 2rem;
-  overflow-y: scroll;
+#auli-about {
+  padding: 2rem;
+  overflow-y: auto;
 }
 
-#dancer {
+#auli-dancer {
   display: flex;
   align-items: flex-end;
+  /* max-height: 200px; */
 }
 
-#dancer video {
-  width: 100%;
+#auli-reset {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
 }
 
-#interface {
-  display: grid;
+#auli-reset button {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  background-image: url("./assets/icons/reset.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#auli-chatbot {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#auli-animation {
+  display: flex;
   align-items: center;
-  justify-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-/*** BOT ***/
-#au-li video {
-  width: 100%;
-}
-
-#chat {
+#auli-message-box {
   text-align: center;
-  margin-top: 6rem;
+  margin: 2rem auto 4rem;
+  position: relative;
+  z-index: 3;
 }
 
-#chat input {
+#auli-message-box input {
   height: 2.375rem;
   width: 45%;
   min-width: 300px;
-  font-family: "Favorit Trial", sans-serif;
+  max-width: 600px;
   padding: 0.25rem 0.5rem;
 }
 
-/*** MODAL ***/
-#modal {
-  display: none;
-  position: fixed;
-  width: 100%;
-  max-width: 800px;
-  bottom: 2rem;
-  right: 2rem;
-  border: 2px solid #8F7D3E;
+.auli-video-container,
+.auli-image-container {
+  display: flex;
 }
 
-#modal.open {
+.auli-modal {
+  display: none;
+}
+
+.auli-modal.open {
   display: block;
 }
 
-#modal-toolbar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem;
-  background: #000;
+.auli-modal .text {
+  padding: 1rem;
 }
 
-
-#article-spread-container {
-  width: 100%;
-  height: 50vh;
-  min-height: 300px;
-  max-height: 500px;
-  overflow-y: scroll;
-  background: #000;
-}
-
-#article-spread {
+.auli-modal img {
   width: 100%;
 }
 
-/*** MOBILE STYLES ***/
+.scroll-loop {
+  height: 100%;
+  overflow-y: hidden;
+  padding: 0 2rem;
+  max-height: 200px;
+}
+
+.scroll-loop p {
+  margin: 0.5rem 0;
+}
+
+/*** mobile only component styles ***/
 @media (max-width: 769px) {
-  header {
-    display: none;
-  }
-
-  body {
-    display: block;
-    height: auto;
-  }
-
-  main {
-    display: block;
-    height: auto;
-  }
-
-  #proto-title-card {
+  #auli-title-card {
     padding-top: 10rem;
-    padding-bottom: 4rem;
     background: #fae1d3;
     color: #000;
   }
 
-  #proto-title-card a {
+  #auli-title-card a {
     border-color: #000;
   }
-
-  #info {
-    display: block;
-    height: auto;
+}
+/*** tablet component styles ***/
+@media screen and (min-width: 769px) {
+  #auli-about {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-height: 425px;
   }
-
-  #about-text {
-    padding: 2rem 2rem;
-    overflow-y: auto;
-  }
-
-  #interface {
-    padding: 4rem 0 8rem;
-  }
-
-  #modal {
-    left: 0;
-    top: 10vh;
-  }
-
-  #article-spread-container {
-    height: 80vh;
+}
+/*** desktop component styles ***/
+@media (min-width: 1024px) {
+  #auli-about {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
     max-height: none;
+  }
+
+  #auli-reset {
+    position: absolute;
+    padding: none;
+    display: block;
+    width: auto;
+    height: auto;
+    top: 2rem;
+    right: 2rem;
+    z-index: 4;
+  }
+
+  #auli-chatbot {
+    margin: 10vh auto 0;
+  }
+
+  .auli-modal {
+    position: absolute;
+  }
+
+  #auli-modal-1 {
+    /* width: calc(20vw - 4rem); */
+    min-width: 300px;
+    max-width: 475px;
+    /* height: calc(300px); */
+    bottom: 15%;
+    left: 12.5%;
+    border: 2px solid #8f7d3e;
+    z-index: 2;
+  }
+
+  #auli-modal-2 {
+    /* width: 30vw; */
+    min-width: 300px;
+    max-width: 550px;
+    /* height: 360px; */
+    bottom: -1vh;
+    right: 5vw;
+    border: 2px solid #8f7d3e;
+    z-index: 2;
   }
 }
