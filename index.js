@@ -219,8 +219,10 @@ function renderAsset(container, asset, opts) {
   container.appendChild(asset);
   if (asset.classList.contains('auli-video-container')) {
     const video = asset.querySelector('video');
+    console.log(video);
     video.loop = opts && Boolean(opts.loop);
     video.muted = opts && Boolean(opts.muted);
+    video.currentTime = 0;
     video.play();
   } else if (asset.classList.contains('scroll-loop')) {
     asset.scrollTop = 0;

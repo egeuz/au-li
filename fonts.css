@@ -1,15 +1,3 @@
-/* @font-face {
-  font-family: "Favorit Trial";
-  src: url("./assets/fonts/ABCFavorit-Regular-Trial.woff2") format("woff2"),
-    url("./assets/fonts/ABCFavorit-Regular-Trial.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Garamond Trial";
-  src: url("./assets/fonts/EBGaramond-Regular.woff2") format("woff2"),
-    url("./assets/fonts/EBGaramond-Regular.woff") format("woff");
-} */
-
 @font-face {
   font-family: "Favorit";
   src: url("./assets/fonts/Favorit_Regular.woff2") format("woff2"),
