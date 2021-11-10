@@ -24,8 +24,8 @@
 #auli input {
   font-family: "Favorit", sans-serif;
   font-size: 1.125rem;
-  background: #000;
-  color: inherit;
+  background: #fff;
+  color: #1e1e1e;
   border: 2px solid #8f7d3e;
   /* TODO: modify input outline on focus */
 }
@@ -39,7 +39,9 @@ body {
 
 #auli {
   background: #000;
+  /* background: #333; */
   color: #fae1d3;
+  box-sizing: border-box;
 }
 
 #auli-interface {
@@ -52,7 +54,10 @@ body {
   #auli-info {
     display: grid;
     grid-template-columns: 350px 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 300px auto;
+    grid-template-areas:
+      "title about"
+      "reset reset";
   }
 }
 
@@ -62,13 +67,19 @@ body {
     height: 100vh;
     display: flex;
     overflow: hidden;
+    flex-direction: row-reverse;
   }
 
   #auli-info {
+    margin-top: 7vh;
     width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    max-height: 540px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem auto 1fr;
+    grid-template-areas:
+      "reset"
+      "title"
+      "about";
   }
 
   #auli-interface {
@@ -84,6 +95,7 @@ body {
 }
 
 #auli-title-card {
+  grid-area: title;
   padding: 2rem;
   text-align: center;
 }
@@ -95,23 +107,19 @@ body {
   padding: 8px 18px;
   font-size: 2rem;
   line-height: 90%;
-  font-family: "Garamond Trial", serif;
+  font-family: "ITC Garamond Narrow", serif;
   text-decoration: none;
   color: inherit;
 }
 
 #auli-about {
+  grid-area: about;
   padding: 2rem;
   overflow-y: auto;
 }
 
-#auli-dancer {
-  display: flex;
-  align-items: flex-end;
-  /* max-height: 200px; */
-}
-
 #auli-reset {
+  grid-area: reset;
   display: flex;
   justify-content: flex-end;
   padding: 1rem 2rem;
@@ -141,19 +149,21 @@ body {
   z-index: 1;
 }
 
-#auli-message-box {
-  text-align: center;
-  margin: 2rem auto 4rem;
-  position: relative;
-  z-index: 3;
+#auli-dancer {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  transform: translateY(2.5rem);
 }
 
-#auli-message-box input {
-  height: 2.375rem;
-  width: 45%;
-  min-width: 300px;
-  max-width: 600px;
-  padding: 0.25rem 0.5rem;
+#auli-message-box {
+  display: block;
+  width: 100%;
+  max-width: calc(360px - 1.25rem);
+  margin: 0 auto;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 3;
 }
 
 .auli-video-container,
@@ -193,43 +203,56 @@ body {
   #auli-title-card {
     padding-top: 10rem;
     background: #fae1d3;
-    color: #000;
+    color: #1e1e1e;
   }
 
   #auli-title-card a {
-    border-color: #000;
+    border-color: #1e1e1e;
   }
 }
 /*** tablet component styles ***/
 @media screen and (min-width: 769px) {
   #auli-about {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    max-height: 425px;
+    margin-bottom: 1rem;
+    max-height: 400px;
+  }
+
+  #auli-dancer {
+    min-width: 360px;
+    max-width: 450px;
+    transform: translateY(3.25rem);
+  }
+
+  #auli-message-box {
+    min-width: 360px;
+    /* width: calc(45vw - 1.25rem); */
+    max-width: 450px;
+    max-width: calc(450px - 1.25rem);
   }
 }
 /*** desktop component styles ***/
 @media (min-width: 1024px) {
   #auli-about {
     padding: 0 2rem;
-    margin-bottom: 2rem;
-    max-height: none;
+    /* max-height: none; */
   }
 
   #auli-reset {
-    position: absolute;
-    padding: none;
-    display: block;
-    width: auto;
-    height: auto;
-    top: 2rem;
-    right: 2rem;
-    z-index: 4;
+    padding: 0;
+    justify-content: center;
   }
 
   #auli-chatbot {
-    margin: 10vh auto 0;
+    margin: 7vh auto 0;
   }
+
+  /* #auli-dancer {
+    width: 25vw;
+  }
+
+  #auli-message-box {
+    width: calc(25vw - 1.25rem);
+  } */
 
   .auli-modal {
     position: absolute;
@@ -247,10 +270,8 @@ body {
   }
 
   #auli-modal-2 {
-    /* width: 30vw; */
     min-width: 300px;
     max-width: 550px;
-    /* height: 360px; */
     bottom: -1vh;
     right: 5vw;
     border: 2px solid #8f7d3e;

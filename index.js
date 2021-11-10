@@ -12,7 +12,7 @@ const AULI_ANIMATION = document.querySelector('#auli-animation');
 const AULI_DANCER = document.querySelector('#auli-dancer');
 const AULI_MODAL_1 = document.querySelector('#auli-modal-1');
 const AULI_MODAL_2 = document.querySelector('#auli-modal-2');
-const CHAT_INPUT = document.querySelector('#auli-message-box input');
+const CHAT_INPUT = document.querySelector('#auli-message-box');
 const RESET_BUTTON = document.querySelector('#auli-reset button');
 /***************/
 /*** RUNTIME ***/
