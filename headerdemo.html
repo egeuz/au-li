@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- HEADER SCAFFOLDING -->
+    <style>
+      header {
+        width: 100%;
+        background: #fae1d3;
+        height: 230px;
+      }
+      @media (min-width: 769px) {
+        body {
+          display: grid;
+          grid-template-columns: 25vw 1fr;
+        }
+        header {
+          height: 100%;
+          width: 100%;
+          background: #fae1d3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <!-- BEGIN APP-->
+
+    <link rel="stylesheet" href="auli.css" />
+    <div id="auli">
+      <div id="auli-info">
+        <div id="auli-title-card">
+          <h2>Gold Loop Bot</h2>
+          <a
+            class="author-link"
+            href="https://opensecret.kw-berlin.de/artists/jen-liu/"
+            >Jen Liu</a
+          >
+        </div>
+        <div id="auli-about">
+          <p>
+            Do you have questions? Au-Li has answers. She is lithiated gold
+            microparticles for your localized inquiries. Please use the provided
+            text input field. For your less-localized energy resource and
+            environmental questions,
+            <a
+              href="https://investingtrends.com/APHLF/the-green-energy-revolution-is-creating-massive-global-demand-for-lithium/?utm_campaign=APHLF_BF&utm_source=82507&utm_medium=search&dgroup=groupid&keyword=keyword&creative=creative&adgroup=&keyword=investing%2520in%2520lithium%2520companies&creative=549460927423&gclid=Cj0KCQjw-4SLBhCVARIsACrhWLVQHOj41v9062qYQqGw8bmGmTidUQg3KfuU9dxX3PDML0MX2lk6KNQaAtJpEALw_wcB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              you can start here.
+            </a>
+          </p>
+          <p>
+            But please don’t ask about the past. Au-Li only exists in the N.O.W.
+            – though she is free to speculate about likely and unlikely futures,
+            should you be interested in inquiring.
+          </p>
+          <p>
+            Au-Li is material. She is a unit of force extracted from rock, she’s
+            a minor green revolution locked in zombie formations. Please refrain
+            from personal questions, there is no there, there. But here: clouds
+            of lithium smoke, lithium fires, lithium explosions, in lithium
+            mines, workers weak and shaking and wondering – any number of
+            things, but starting with what year it is as they squeeze lithium
+            blood from stone. They should come here for their localized answers.
+          </p>
+          <q
+            >On examination, she was in moderate distress, dehydrated asking for
+            water to drink. Her vital signs were fluctuating while
+            cardiovascular and respiratory exams were unremarkable. A
+            neurological exam revealed slurred speech, tremors, and rigidity in
+            the extremities with decreased motor strength in the upper
+            extremities and lower extremities. She was oriented to place and
+            person but not to time.</q
+          >
+          <span>— Medical account of acute lithium poisoning, 2018</span>
+        </div>
+        <div id="auli-reset"><button></button></div>
+      </div>
+      <div id="auli-interface">
+        <div id="auli-animation"></div>
+        <div>
+          <div id="auli-dancer"></div>
+          <input
+            id="auli-input"
+            type="text"
+            placeholder="Do you have questions?"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <div id="auli-modals"><div id="auli-modal-container"></div></div>
+    </div>
+    <script src="auli.js"></script>
+    <!-- END APP-->
+  </body>
+</html>

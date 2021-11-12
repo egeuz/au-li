@@ -1,0 +1,514 @@
+[
+  {
+    "setID": "idle",
+    "animation": {
+      "id": "anim_01",
+      "type": "video",
+      "src": "anim_01_breathing.mp4"
+    },
+    "dancer": {
+      "id": "dancer_00",
+      "type": "video",
+      "src": "dancer_00_swaying.mp4",
+      "config": { "loop": true }
+    },
+    "modals": ""
+  },
+  {
+    "setID": "reset",
+    "animation": {
+      "id": "anim_04",
+      "type": "video",
+      "src": "anim_04_reset.mp4"
+    },
+    "dancer": "",
+    "modals": ""
+  },
+  {
+    "setID": "01",
+    "keywords": "hey, hello, bye, how, what, going, greet, good, evening, morning, afternoon, nice, meet, salutation",
+    "animation": {
+      "id": "anim_01",
+      "type": "video",
+      "src": "anim_01_breathing.mp4"
+    },
+    "dancer": {
+      "id": "dancer_01",
+      "type": "video",
+      "src": "dancer_01_pacing.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r01m01",
+        "type": "video",
+        "src": "The_Hand.mp4",
+        "config": { "loop": true },
+        "styles": {
+          "max-width": "15vw",
+          "max-height": "375px",
+          "alignSelf": "center",
+          "left": "2.5%"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "02",
+    "keywords": "think, opinion, rip, torn, smash, splat, broke, broken, strike, resist, insurrection, break, storm, charge, attack, war, battle, fight, fist, flag, trench, cannon, combat, protest, violent, conflict, polar, confused, question, answer, resolve, dizzy, sick, delirious, faint, whelm",
+    "animation": {
+      "id": "anim_02",
+      "type": "video",
+      "src": "anim_02_fall_deflate.mp4"
+    },
+    "dancer": {
+      "id": "dancer_04",
+      "type": "video",
+      "src": "dancer_04_fall_down.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r02m01",
+        "type": "html",
+        "effect": "typing",
+        "src": "<p>. . . . . . . . . .</p>",
+        "styles": {
+          "fontSize": "5rem",
+          "color": "#ffffff",
+          "bottom": "9rem",
+          "left": "55%",
+          "margin": "0",
+          "minHeight": "5.5rem",
+          "background": "none",
+          "boxShadow": "none"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "03",
+    "keywords": "economy, rich, poor, middle, class, union, precarious, precarity, capital, communism, marx, mao, social, expedition, colony, colonialism, develop, global, north, south, east, west, continent, america, mexico, europe, africa, asia, china, germany, france, nigeria, ethiopia, greece, portugal, spain, italy, state, capitol, power, govern, recession, inflation, team, consolidate, money, cash, invest, stock, govern, poverty, subsist, loan, debt, bank, check, cheque, gold, exchange, gift, silver, platinum, diamond",
+    "animation": {
+      "id": "anim_g01",
+      "type": "html",
+      "src": "<div class='battery-img'><img src='./assets/content/battery_3.gif' alt='battery'><img src='./assets/content/battery_3.gif' alt='battery'></div>"
+    },
+    "dancer": "",
+    "modals": [
+      {
+        "id": "r03m01",
+        "type": "html",
+        "effect": "scroll-loop",
+        "styles": {
+          "maxWidth": "375px",
+          "maxHeight": "200px",
+          "color": "#0099D1",
+          "bottom": "3rem",
+          "left": "48.5%",
+          "margin": "1rem auto"
+        },
+        "src": "<p>Long live the power of lithium! Queen of rechargeable batteries shall reign for the future.</p><p>When it comes to making computer circuits, silicon is king. Contenders for the throne include optical switches, DNA, proteins, germanium and graphene. Each has legitimate grounds to be considered but has struggled in development, while silicon-based computers have relentlessly improved, such that the performance gap between silicon and its potential usurpers has widened.</p><p>A similar widening gap has occurred in rechargeable batteries. If silicon is the king of electronic circuits, lithium is the queen of batteries. I find it surprising that one element so thoroughly dominates battery technology but, like king silicon for circuits, queen lithium has properties that make it superior to all the alternatives.</p><p>Batteries comprise three essential components: the negative terminal (also known as the anode), the positive terminal (the cathode) and the interior soup of ions called the electrolyte, usually a liquid or gel. When the negative and positive terminals are connected through an external circuit such as your flashlight, the battery discharges by driving electrons from the negative terminal to the positive terminal, providing the energy to generate light. Inside the battery, the circuit is completed by the flow of positive ions through the electrolyte. In a lithium-ion battery, these positive ions are lithium atoms that have been stripped of an electron.</p><p>Most of the billions of dollars spent each year to develop better lithium-ion batteries are invested in improving the materials for the terminals and the electrolyte. The negative terminal has to act like a sponge, absorbing and storing as many positively charged lithium ions as possible. Graphite is most commonly used, but variations such as graphene that can absorb even more lithium ions without swelling are actively being sought. The positive terminal is often made from lithium cobalt oxide, though there are many alternatives in production and in development. The electrolyte includes lithium salts such as lithium hexafluorophosphate.</p><p>What makes lithium special? For starters, it is the lightest of all metals and the third-lightest element, sitting in the periodic table immediately after hydrogen and helium. Further, of the metals commonly used for batteries, lithium has the highest ‘working voltage’ – the voltage difference between the negative terminal and the positive terminal.</p><p>This combination of a high working voltage (up to 3.6 volts) and light weight contributes to lithium batteries having the highest energy storage per kilogram, making them ideal for mobile applications. Thanks to lithium-ion (Li-ion) batteries, a Tesla car can get away with a battery weight of 600 kg, compared with 4,000 kg or more if it were to rely on conventional lead acid batteries.</p><p>Unlike lead acid batteries, in use for more than a century, lithium-ion batteries can be discharged down to about 10% of their rated capacity without failure, and do so thousands of times. They do not carry the curse of the memory effect that reduces the working lifetime in nickel-cadmium (NiCd) and nickel-metal hydride (NiMH) batteries unless they are fully discharged before recharging. Further, lithium-ion batteries left sitting on the shelf will lose charge at a much slower rate than other battery chemistries.</p><p>Like any chemical at high concentrations, lithium is harmful to humans if ingested but is otherwise very low on the toxicity scale; in fact, it is so relatively harmless that for more than 50 years lithium carbonate salt has been routinely used as a medicine to treat bipolar disorder.</p><p>Wonderful as they are, lithium-ion batteries do have some drawbacks. For example, they lose peak capacity after a few years of operation. Further, because of safety concerns, battery packs must be made with complex protection circuits to limit overheating and maximum currents.</p><p>It is difficult to predict where the next big battery breakthrough will come from. The competition is intense and advances are announced daily. My money is on replacing the liquid electrolyte with a solid-state electrolyte that is a kind of glass. If successful, the solid-state electrolyte will allow faster charging, increased safety, up to three times the energy density and longer lifetimes.</p><p>Sound too good to be true? The latest announcement from Toyota Motor Corporation confidently claims it will introduce solid-state lithium-ion batteries in 2022. While it is early days, solid-state lithium-ion batteries can provide a step change in performance that will give us electric cars able to go 1,000 km and smartphones that can be used for several days between charges.</p><p>Originally published by Cosmos as Long live the power of lithium!</p>"
+      }
+    ]
+  },
+  {
+    "setID": "04",
+    "keywords": "human, bot, simulation, simulate, fake, real, joke, joking, laugh, ridiculous, iron, brain, think, philosoph, theory, being, theoretical, theme, consider, true, false, wonder, capture, motion, program, assistant, cloud, auto, confirm, deny, blockchain, NFT, crypto, currency, abstract, bratton, stack, virtual, stock, avatar, siri, amazon, turk, fulfill, center, pack, automat, response, help, assist, 3D, animat, simulat, matrix, pill, ninja, conspiracy, weil, hide, hidden, speculat, eliza",
+    "animation": {
+      "id": "anim_g02",
+      "type": "image",
+      "src": "tumblr_b01dbe08632d9452745b3abef680eef5_b3ace83b_400.gif"
+    },
+    "dancer": {
+      "id": "dancer_04",
+      "type": "video",
+      "src": "dancer_04_fall_down.mp4",
+      "config": { "loop": true }
+    },
+    "modals": ""
+  },
+  {
+    "setID": "05",
+    "keywords": "walk, stroll, exercise, exertion, trail, hike, hiking, travel, run, jump, excursion, visa, residency, ship, travel, international, luggage, airplane, flight, arrival, departure, port, entry, move, flip, roll, entry, door, gate, pass, trip, tour, safari, cruise, emig, immig, translat, native, alien, indigen, foreign, travel, visa, border, transport, container, checkpoint, agent, steward, attendant, pilot",
+    "animation": {
+      "id": "anim_09",
+      "type": "video",
+      "src": "anim_09_walking.mp4"
+    },
+    "dancer": {
+      "id": "dancer_01",
+      "type": "video",
+      "src": "dancer_01_pacing.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r05m01",
+        "type": "html",
+        "effect": "typing",
+        "src": "<p>Here > > > > > > > > > > > ></p>",
+        "styles": {
+          "bottom": "0rem",
+          "left": "10vw",
+          "fontSize": "3rem",
+          "boxShadow": "none",
+          "background": "none"
+        }
+      },
+      {
+        "id": "r05m02",
+        "type": "html",
+        "effect": "blink",
+        "src": "<p>There</p>",
+        "styles": {
+          "bottom": "0rem",
+          "right": "15vw",
+          "fontSize": "3rem",
+          "boxShadow": "none",
+          "background": "none"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "06",
+    "keywords": "water, ocean, river, lake, h2o, tear, cry, wet, moist, precipitat, rain, snow, storm, hurricane, flood, condition, mist, humid,  tongue, blood, puss, seep, weep, sad, river, wave, coast, tsunami, drown, swim, sink, fish, whale, dolphin, island, jell, clam, oyster, pond, salmon, tuna, grouper, anchor, current, pool, whirl, sop, soup, fog, drip, condens, drizzl, crab, beach, sand, float, suspen, sprinkl",
+    "animation": {
+      "id": "anim_08",
+      "type": "video",
+      "src": "anim_08_ocean.mp4",
+      "styles": {
+        "transform": "scale(1.5)"
+      }
+    },
+    "dancer": "",
+    "modals": [
+      {
+        "id": "r06m01",
+        "type": "video",
+        "src": "BRINE_POOLS.mp4",
+        "config": { "sound": true, "loop": true },
+        "styles": {
+          "maxWidth": "350px",
+          "height": "auto",
+          "right": "20vw",
+          "bottom": "0",
+          "zIndex": "13"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "07",
+    "keywords": "transport, logistic, boat, ship, container, slave, trade, rout, merchant, italy, italian, dutch, india, colon, serf, subject, expansion, genocide, smallpox, invasi, incursion, amazon, casco, navy, sail, overboard, gangplank, pira, steal, stolen, pillage, exract, mine, mining, initiative, pipline, mission, agreement, resolution, rout, harmon, standard, IBAN, scan, histor, product, consum",
+    "animation": {
+      "id": "anim_08",
+      "type": "video",
+      "src": "anim_08_ocean.mp4",
+      "styles": {
+        "transform": "scale(1.5)"
+      }
+    },
+    "dancer": {
+      "id": "dancer_03",
+      "type": "video",
+      "src": "dancer_03_simple_gestures.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r07m01",
+        "type": "html",
+        "src": "<p>Invisible bodies, by definition, can be done away much more easily than visible ones. Since angels, ghosts, <a href='https://www.lionsroar.com/wp-content/uploads/2020/05/demon-1-from-bakemono-zukushi-scroll-artist-unknown-cropped.jpg' target='_blank' rel='noopener noreferrer'>demons</a>, ancestors, ghouls and the like take up no space in our empirical world, the liquidation of them involves no bloodletting, leaves no corpses, and calls for no official inquiry.  Whenever such invisible bodies are being deleted from the 'chain of being' long believed in by a given people, that actof erasure is a sure sign that the aspiration to be recognized as 'modern' has gotten strong among them. <br> - William Lafleur</p>",
+        "styles": {
+          "color": "#C07F76",
+          "maxWidth": "500px",
+          "right": "20%",
+          "bottom": "3rem"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "08",
+    "keywords": "air, breath, particle, tornado, wind, wheeze, ozone, global, warming, environment, warm, disaster, ecology, ecological, forest, wood, breeze, breezy, heat, desert, mirage, oven, bake, roast, cook, burn, break, dry, dehydrate, crumbl, bone, parch, crack, dust, fire, ash, crisp, flammable, soar, phoenix, sky, sound, music, instrument, melod, song, sing, compos, orchestra, play, string, bow, wood, brass",
+    "animation": {
+      "id": "anim_03",
+      "type": "video",
+      "src": "anim_03_break.mp4"
+    },
+    "dancer": {
+      "id": "dancer_i01",
+      "type": "image",
+      "src": "QR_HG.png",
+      "styles": {
+        "maxWidth": "180px",
+        "filter": "invert(1)",
+        "zIndex": "16",
+        "position": "relative",
+        "margin-bottom": "16px"
+      }
+    },
+    "modals": [
+      {
+        "id": "r08m01",
+        "type": "html",
+        "effect": "scroll-loop",
+        "styles": {
+          "maxWidth": "400px",
+          "maxHeight": "200px",
+          "bottom": "3rem",
+          "left": "47.5%"
+        },
+        "src": "<p class='scroll-pinkblue'><a href='https://techcrunch.com/wp-content/uploads/2021/05/Employee-working-at-Spoke-1-in-Kingston-ON-1.jpg?w=730&crop=1' target='_blank' rel='noopener noreferrer'>Disassembly of battery packs from automotive applications</a> requires high-voltage training and insulated tools to prevent <a href='https://ohsonline.com/Articles/2004/02/Big-Batteries-Big-Electric-Shock-Potential.aspx?m=1' target='_blank' rel='noopener noreferrer'>electrocution of operators</a> or short-circuiting of the pack.  Short-circuiting results in rapid discharge, which may lead to heating and thermal runaway. Thermal runaway may result in the generation of particularly noxious byproducts, including <a href='https://www.cdc.gov/niosh/ershdb/emergencyresponsecard_29750030.html' target='_blank' rel='noopener noreferrer'>HF gas</a>, which along with other product gases may become trapped and ultimately result in <a href='https://www.chron.com/news/houston-texas/houston/article/Train-explosion-leads-to-chemical-release-in-11095738.php' target='_blank' rel='noopener noreferrer'>cells exploding.</a> The cells also present a chemical hazard owing to the flammable electrolyte, toxic and <a href='https://www.google.com/url?q=https://www.hopaxfc.com/en/blog/why-use-additives-for-lithium-ion-batteries&sa=D&source=editors&ust=1636345035898000&usg=AOvVaw1M1WP8xdiQ8n2dOvzIVRgU' target='_blank' rel='noopener noreferrer'>carcinogenic electrolyte additives,</a> and the potentially toxic or carcinogenic electrode materials.</p>"
+      }
+    ]
+  },
+  {
+    "setID": "09",
+    "keywords": "fuck, shit, cunt, dick, crap, stupid, boring, torture, incel, democrat, republican, demorat, moron, tard, poop, diarrhea, vomit, puke, pee, piss, trump, biden, washington, politic, America, apocalypse, topia, kick, punch, slap, crash, smash, reddit, douche, stick, clown, ass, arse, wank, crud, swear, curs, dump, turd, dirt, filth, crust, abject, fear, loathing, loathe, hate, disdain, terror, worry, yuck, suck, like, evil, anti",
+    "animation": {
+      "id": "anim_05",
+      "type": "video",
+      "src": "anim_05_ok.mp4"
+    },
+    "dancer": {
+      "id": "dancer_05",
+      "type": "video",
+      "src": "dancer_05_posing.mp4",
+      "config": { "loop": true }
+    },
+    "modals": ""
+  },
+  {
+    "setID": "10",
+    "keywords": "transmi, mandate, vaccine, covid, sick, illness, pandemic, shot, CDC, delta, wuhan, mask, shield, infect, virus, bacteria, quarantin, lockdown",
+    "animation": {
+      "id": "anim_10",
+      "type": "video",
+      "src": "anim_10_smiley.mp4"
+    },
+    "dancer": {
+      "id": "dancer_02",
+      "type": "video",
+      "src": "dancer_02_confused.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r10m01",
+        "type": "video",
+        "src": "OPTISORT_YELLOW.mp4",
+        "config": { "sound": true },
+        "styles": {
+          "maxWidth": "300px",
+          "left": "10%"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "11",
+    "keywords": "lithium, technology, computer, phone, tablet, social, email, DM, message, point, purpose, keyboard, screen, print, type, scan, watch, email, mouse, click, eyeball, scroll, social, media, news, tiktok, facebook, instagram, data, electronic, gadget, digital, wire, cord, electric, spark, static, signal, laser, work, smart, engine, web, site, online, commerce, ebay, craigslist, brand, archive, server, digitize, digitization, src",
+    "animation": {
+      "id": "anim_e01",
+      "type": "video",
+      "src": "Hyperdance.mp4",
+      "config": { "sound": true }
+    },
+    "dancer": {
+      "id": "dancer_06",
+      "type": "video",
+      "src": "dancer_06_dancing.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r11m01",
+        "type": "html",
+        "src": "<p>“Dance you shall,” said he, “dance in your red shoes till you are pale and cold, till your skin shrivels up and you are a skeleton!</p><p>Dance you shall, from door to door, and where proud and wicked children live you shall knock, so that they may hear you and fear you!</p><p>Dance you shall, dance—!”</p><p>“Mercy!” cried Karen.</p>",
+        "styles": {
+          "max-width": "300px",
+          "color": "#8E97C7",
+          "bottom": "0",
+          "right": "25%"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "12",
+    "keywords": "poison, toxic, waste, recycle, burnt, guiyu, acid, drum, PPE, glove, boot, rubber, latex, cartridge, dump, seep, ooz, disint, autop, volatil, smok, corros, radio, uran, environment, litter, CFC, ozone",
+    "animation": {
+      "id": "anim_06",
+      "type": "video",
+      "src": "anim_06_eyeball.mp4"
+    },
+    "dancer": {
+      "id": "dancer_02",
+      "type": "video",
+      "src": "dancer_02_confused.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r12m01",
+        "type": "html",
+        "effect": "scroll-loop",
+        "styles": {
+          "maxWidth": "250px",
+          "maxHeight": "200px",
+          "bottom": "3rem",
+          "left": "55%"
+        },
+        "src": "<p><p>LITHIUM SIDE EFFECTS</p><p>If you are between the ages of 18 and 60, take no other medication or have no other medical conditions, side effects you are more likely to experience include:</p><p>Fine hand tremor, frequent urination, and mild thirst commonly occur during lithium initiation. Sometimes these effects may persist throughout treatment. Nausea during initiation is common but usually subsides with continued administration.</p><p>Diarrhea, vomiting, drowsiness, muscular weakness, loss of appetite, and coordination difficulties may be an early sign of lithium toxicity. Dizziness, blurred vision, ringing in the ears and excessive production of dilute urine may occur with higher (toxic) lithium levels. Seek urgent medical advice.</p><p>Lithium may also cause irregular heartbeat, drying and thinning of hair, alopecia, dry mouth, weight gain, itchiness, and other side effects. Long-term use may lead to kidney disease, high blood calcium levels, hyperparathyroidism, hypothyroidism, or other thyroid problems.</p><p>May require multiple daily doses. Conventional tablets, capsules, or oral solution requires 3 or 4 times daily dosage - less frequent dosing may be associated with gastrointestinal or nervous system effects. Extended-release preparations may be administered 2 to 3 times daily.</p><p>Dosing may be difficult because there is not much of a margin between an adequate dose of lithium and a toxic dose. Facilities should be available that can quickly and accurately monitor serum lithium concentrations. If toxicity occurs, temporarily discontinue for 24 to 48 hours then resume at a lower dosage.</p><p>Monitoring is required and should be done twice weekly during therapy initiation and then every two months long-term.</p><p>Not suitable for people with significant renal or cardiovascular disease, who are frail, dehydrated, taking diuretics, with low levels of sodium, or on a sodium-restricted diet. In exceptional circumstances, lithium may be used if the patient's condition is life-threatening and other treatments have failed.</p><p>Not recommended for children aged less than 12. Lithium use may cause an unmasking of Brugada syndrome (a heart disorder characterized by abnormal ECG findings and a risk of sudden death).</p><p>The range of effects of lithium in pregnancy has not been fully determined so experts recommend women avoid lithium, particularly in the first trimester. Lithium has been associated with fetal toxicity, such as cardiac anomalies, especially Ebstein's anomaly. If given during pregnancy, dosages of lithium generally need to be increased but should be reduced 1 week before giving birth or when labor begins.</p><p>May interact with several other medications including diuretics (water pills), NSAIDs, and ACE inhibitors.</p><p>Interaction or overdosage may cause serotonin syndrome (symptoms include mental status changes [such as agitation, hallucinations, coma, delirium]), fast heart rate, dizziness, flushing, muscle tremor or rigidity, and stomach symptoms (including nausea, vomiting, and diarrhea).</p></p>"
+      }
+    ]
+  },
+  {
+    "setID": "13",
+    "keywords": "animal, culture, nurture, pet, dog, cat, doggy, bunny, fish, genetics, genetic, engineer, DNA , veterinarian, cultivate, domestic, fur, leather, skin, paw, hoof, snout, tail, lab, monk, replicat, experiment, cruel, PETA, modif, sheep, frankenstein, IVF, clon, codon, amino, RNA, novel, hybrid, speci, product",
+    "animation": {
+      "id": "anim_07",
+      "type": "video",
+      "src": "anim_07_duck.mp4"
+    },
+    "dancer": {
+      "id": "dancer_i02",
+      "type": "image",
+      "src": "Picture1-640x400.jpg",
+      "styles": {
+        "max-width": "325px",
+        "margin": "0 auto",
+        "transform": "translate(25px, -2rem)"
+      }
+    },
+    "modals": [
+      {
+        "id": "r13m01",
+        "type": "video",
+        "src": "RIO_TINTO_BLUE.mp4",
+        "config": { "sound": true, "loop": true },
+        "styles": {
+          "max-width": "475px",
+          "height": "auto",
+          "right": "10%",
+          "alignSelf": "center"
+        }
+      },
+      {
+        "id": "r13m02",
+        "type": "video",
+        "src": "DUCKS.mp4",
+        "config": { "sound": true, "loop": true },
+        "styles": {
+          "max-width": "275px",
+          "height": "auto",
+          "bottom": "3rem",
+          "right": "20%"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "14",
+    "keywords": "agriculture, cow, farm, farming, vegan, vegetarian, beef, chicken, pig, pork, meat, food, meal, snack, steak, drumstick, chop, butcher, dinner, eat, chew, protein, burger, sandwich, rice, breakfast, lunch, dinner, diner, fork, spoon, knife, table, soup, stew, chef, cook, cuisine, bread, butter, milk, supermarket, distribution,  portion, plate, course, fork, knife, spoon, ladle, bak, fry, broil, consum, chew, swallow, snack, junk, taco, pizza, pasta, sushi, burrito, soup, rice, curry, casserole, turkey, potato, frie, bread, grain, lentil, egg, cream, yogurt, jam, vegan, veget, seed",
+    "animation": {
+      "id": "anim_07",
+      "type": "video",
+      "src": "anim_07_duck.mp4"
+    },
+    "dancer": {
+      "id": "dancer_01",
+      "type": "video",
+      "src": "dancer_01_pacing.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r14m01",
+        "type": "html",
+        "effect": "scroll-frame",
+        "src": "<img src='./assets/content/lithium-green-revolution.jpg'>",
+        "styles": {
+          "opacity": "0.9",
+          "max-width": "450px",
+          "max-height": "90vh",
+          "bottom": "0"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "15",
+    "keywords": "surveil, watch, watch, brother, movie, film, therapy, entertain, ticket, research, know, informat, learn, educat, teach, student, school, class, text, book, look, stare, window, spy, stalk, follow, track, screen, gaz, trail, shadow, hack, replic, observ, see, sight, target, chart, data, quant, qual, crew, light, lens, direct, assist, record, archiv, librar, stor, fil",
+    "animation": {
+      "id": "anim_06",
+      "type": "video",
+      "src": "anim_06_eyeball.mp4"
+    },
+    "dancer": "",
+    "modals": [
+      {
+        "id": "r15m01",
+        "type": "html",
+        "src": "<p>I LOVE YOU SO MUCH I WANT TO SKIN YOU ALIVE AND THEN WEAR YOUR SKIN SO I'LL BE INSIDE YOU</p>",
+        "styles": {
+          "width": "100%",
+          "text-align": "right",
+          "bottom": "5%",
+          "right": "3rem",
+          "color": "#a3a3a3"
+        }
+      },
+      {
+        "id": "r15m02",
+        "type": "video",
+        "src": "SEE_YOU_AGAIN_PINK.mp4",
+        "config": { "sound": true },
+        "styles": {
+          "maxWidth": "400px",
+          "height": "auto",
+          "bottom": "25%",
+          "left": "5%"
+        }
+      }
+    ]
+  },
+  {
+    "setID": "16",
+    "keywords": "cartoon, crayon, charcoal, pencil, gesture, art, aller, museum, exhibition, show, curator, install, hang, sculpture, creative, make, workshop, writ, modern, illustrate, sketch, draw, represent, paint, represent, abstract, liter, copy, duplicate, xerox, again, repeat, poet, fiction, contemp, fine, studio, residen, acryl, oil, sculpt, wood, metal, cast, bronz, glass, resin, plastic, carv, stack, pil, model, mus, impress, avant, magaz, book, essay, print, photo, video, riso, anim",
+    "animation": {
+      "id": "anim_g03",
+      "type": "image",
+      "src": "8IuC.gif",
+      "styles": {
+        "transform": "translateY(7.5vw)"
+      }
+    },
+    "dancer": {
+      "id": "dancer_04",
+      "type": "video",
+      "src": "dancer_04_fall_down.mp4",
+      "config": { "loop": true }
+    },
+    "modals": [
+      {
+        "id": "r16m01",
+        "type": "html",
+        "effect": "scroll-loop, vertical-shade",
+        "styles": {
+          "maxHeight": "240px",
+          "maxWidth": "375px",
+          "color": "#CC7799",
+          "bottom": "0",
+          "right": "17.5%",
+          "margin": "0",
+          "paddingBottom": "2rem"
+        },
+        "src": "<p>I get delirious whenever you're near</p><p>Lose all self-control, baby just can't steer</p><p>Wheels get locked in place</p><p>Stupid look on my face</p><p>It comes to making a pass, pretty mama</p><p>I just can't win a race</p><p>I get delirious when you hold my hand</p><p>Body gets so weak I can hardly stand</p><p>My temperature's running hot</p><p>Baby you got to stop</p><p>Because if you don't, I'm going to explode</p><p>And girl I got a lot</p><p>I get delirious whenever you're near</p><p>Girl you gotta take control because I just can't steer</p><p>You're just too much to take</p><p>I can't stop, I ain't got no brakes</p><p>Girl you got to take me for a little ride up and down</p><p>In and out and around your lake</p>"
+      }
+    ]
+  }
+]

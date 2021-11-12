@@ -4,23 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AU-LI [PROTO]</title>
-    <link rel="stylesheet" href="fonts.css" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
+    <header></header>
+    <!-- BEGIN APP-->
+    <link rel="stylesheet" href="auli.css" />
     <div id="auli">
       <div id="auli-info">
         <div id="auli-title-card">
           <h2>Gold Loop Bot</h2>
-          <a class="author-link" href="#testlink">Jen Liu</a>
+          <a
+            class="author-link"
+            href="https://opensecret.kw-berlin.de/artists/jen-liu/"
+            >Jen Liu</a
+          >
         </div>
         <div id="auli-about">
           <p>
             Do you have questions? Au-Li has answers. She is lithiated gold
             microparticles for your localized inquiries. Please use the provided
             text input field. For your less-localized energy resource and
-            environmental questions, you can start here.
+            environmental questions,
+            <a
+              href="https://investingtrends.com/APHLF/the-green-energy-revolution-is-creating-massive-global-demand-for-lithium/?utm_campaign=APHLF_BF&utm_source=82507&utm_medium=search&dgroup=groupid&keyword=keyword&creative=creative&adgroup=&keyword=investing%2520in%2520lithium%2520companies&creative=549460927423&gclid=Cj0KCQjw-4SLBhCVARIsACrhWLVQHOj41v9062qYQqGw8bmGmTidUQg3KfuU9dxX3PDML0MX2lk6KNQaAtJpEALw_wcB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              you can start here.
+            </a>
           </p>
           <p>
             But please don’t ask about the past. Au-Li only exists in the N.O.W.
@@ -50,33 +62,20 @@
         <div id="auli-reset"><button></button></div>
       </div>
       <div id="auli-interface">
-        <div id="auli-chatbot">
-          <div id="auli-animation">
-            <div class="auli-video-container">
-              <video
-                src="./assets/animations/01_breathe.mp4"
-                muted
-                autoplay
-                loop
-              ></video>
-            </div>
-          </div>
-          <div id="auli-dancer">
-            <div class="auli-video-container">
-              <video
-                src="assets/videos/dancer_01_swaying.mp4"
-                muted
-                autoplay
-                loop
-              ></video>
-            </div>
-          </div>
-          <input id="auli-message-box" type="text" autocomplete="off" />
+        <div id="auli-animation"></div>
+        <div>
+          <div id="auli-dancer"></div>
+          <input
+            id="auli-input"
+            type="text"
+            placeholder="Do you have questions?"
+            autocomplete="off"
+          />
         </div>
-        <div class="auli-modal" id="auli-modal-1"></div>
-        <div class="auli-modal" id="auli-modal-2"></div>
       </div>
+      <div id="auli-modals"><div id="auli-modal-container"></div></div>
     </div>
-    <script src="index.js"></script>
+    <script src="auli.js"></script>
+    <!-- END APP-->
   </body>
 </html>
