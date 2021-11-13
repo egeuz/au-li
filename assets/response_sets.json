@@ -93,7 +93,7 @@
     "animation": {
       "id": "anim_g01",
       "type": "html",
-      "src": "<div class='battery-img'><img src='./assets/content/battery_3.gif' alt='battery'><img src='./assets/content/battery_3.gif' alt='battery'></div>"
+      "src": "<div class='battery-img'><img src='https://opensecret.kw-berlin.de/wp-content/themes/twentytwenty-child/au-li-main/assets/content/battery_3.gif' alt='battery'><img src='https://opensecret.kw-berlin.de/wp-content/themes/twentytwenty-child/au-li-main/assets/content/battery_3.gif' alt='battery'></div>"
     },
     "dancer": "",
     "modals": [
@@ -431,7 +431,7 @@
         "id": "r14m01",
         "type": "html",
         "effect": "scroll-frame",
-        "src": "<img src='./assets/content/lithium-green-revolution.jpg'>",
+        "src": "<img src='https://opensecret.kw-berlin.de/wp-content/themes/twentytwenty-child/au-li-main/assets/content/lithium-green-revolution.jpg'>",
         "styles": {
           "opacity": "0.9",
           "max-width": "450px",
