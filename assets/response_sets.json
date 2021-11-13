@@ -45,6 +45,7 @@
         "src": "The_Hand.mp4",
         "config": { "loop": true },
         "styles": {
+          "min-width": "180px",
           "max-width": "15vw",
           "max-height": "375px",
           "alignSelf": "center",

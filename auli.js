@@ -235,6 +235,7 @@ function playResetResponse() {
     animation: idleSet.animation.id,
     dancer: idleSet.dancer.id
   };
+  clearContainer(AULI_MODAL_CONTAINER);
   resetTextAnimations();
   playResponseQueue([resetRes, idleRes]);
 }
