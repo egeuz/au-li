@@ -477,7 +477,8 @@
           "maxHeight": "90vh",
           "bottom": "0",
           "display": "flex",
-          "alignItems": "flex-start"
+          "alignItems": "flex-start",
+          "right": "10%"
         }
       }
     ]

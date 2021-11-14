@@ -103,24 +103,40 @@ function initAssets() {
             container.classList.add('intrinsic-ignore');
             const video = initVideo(src, config);
             container.appendChild(video);
+            if (styles) applyStyles(styles, container);
           } else if (type === 'image') {
             container.classList.add('auli-image-container');
             const image = initImage(src);
             container.appendChild(image);
-            if (effect && effect === 'double-image') {
-              container.appendChild(initImage(src));
+            if (styles) applyStyles(styles, container);
+            if (effect) {
+              if (effect === 'double-image') {
+                container.appendChild(initImage(src));
+              } else {
+                effect.split(', ').forEach(cls => {
+                  container.classList.add(`auli-${cls}`);
+                });
+              }
             }
           } else if (type === 'html') {
-            if (!effect) container.classList.add('auli-text');
-            container.classList.add('bg-shadow');
-            container.innerHTML = src;
+            container.classList.add('auli-modal-content');
+            const effectContainer = document.createElement('div');
+            if (effect) {
+              effect.split(', ').forEach(cls => {
+                effectContainer.classList.add(`auli-${cls}`);
+              })
+            } else {
+              effectContainer.classList.add('auli-text');
+            }
+            const bgShadow = document.createElement('div');
+            bgShadow.classList.add('bg-shadow');
+            effectContainer.innerHTML = src;
+            if (styles) applyStyles(styles, effectContainer);
+            container.appendChild(effectContainer);
+            if (styles) applyStyles(styles, container);
+            container.appendChild(bgShadow);
+
           }
-          if (effect) {
-            effect.split(', ').forEach(cls => {
-              container.classList.add(`auli-${cls}`);
-            });
-          }
-          if (styles) applyStyles(styles, container);
           assets[id] = container;
         });
       }
@@ -222,16 +238,16 @@ function renderElement(container, element) {
     const video = element.querySelector('video');
     video.currentTime = 0;
     video.play();
-  } else if (element.classList.contains('auli-scroll-loop')) {
+  } else if (element.childNodes[0].classList.contains('auli-scroll-loop')) {
     element.scrollTop = 0;
-    SCROLL_LOOP_INTERVAL = setInterval(handleScrollLoop, SCROLL_SPEED, element);
-  } else if (element.classList.contains('auli-typing')) {
+    SCROLL_LOOP_INTERVAL = setInterval(handleScrollLoop, SCROLL_SPEED, element.childNodes[0]);
+  } else if (element.childNodes[0].classList.contains('auli-typing')) {
     const textContainer = element.querySelector('p');
     TYPING_TARGET_TEXT = textContainer.innerText;
     textContainer.innerHTML = '';
     TYPING_INTERVAL = setInterval(handleTypingAnimation, modulateTypeSpeed(-50, 200), textContainer);
-  } else if (element.classList.contains('auli-blink')) {
-    element.style.animationDuration = `${modulateTypeSpeed(200, 600) * 4 / 500}s`;
+  } else if (element.childNodes[0].classList.contains('auli-blink')) {
+    element.childNodes[0].style.animationDuration = `${modulateTypeSpeed(200, 600) * 4 / 500}s`;
   }
 }
 
@@ -244,6 +260,7 @@ function playResetResponse() {
     dancer: idleSet.dancer.id
   };
   clearContainer(AULI_MODAL_CONTAINER);
+  clearContainer(AULI_DANCER);
   resetTextAnimations();
   playResponseQueue([resetRes, idleRes]);
 }
