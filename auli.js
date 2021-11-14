@@ -78,7 +78,8 @@ function initAssets() {
         if (
           prop === 'fontSize' ||
           prop === 'color' ||
-          prop.includes('margin')
+          prop.includes('margin') ||
+          prop === 'textDecoration'
         ) {
           Array.from(
             container.querySelectorAll('*')
@@ -106,16 +107,18 @@ function initAssets() {
             container.classList.add('auli-image-container');
             const image = initImage(src);
             container.appendChild(image);
-          } else if (type === 'html') {
-            if (effect) {
-              effect.split(', ').forEach(cls => {
-                container.classList.add(`auli-${cls}`);
-              })
-            } else {
-              container.classList.add(`auli-text`);
+            if (effect && effect === 'double-image') {
+              container.appendChild(initImage(src));
             }
+          } else if (type === 'html') {
+            if (!effect) container.classList.add('auli-text');
             container.classList.add('bg-shadow');
             container.innerHTML = src;
+          }
+          if (effect) {
+            effect.split(', ').forEach(cls => {
+              container.classList.add(`auli-${cls}`);
+            });
           }
           if (styles) applyStyles(styles, container);
           assets[id] = container;
@@ -151,6 +154,7 @@ function generateResponseQueue(message) {
       keywords.forEach(keyword => {
         if (message.includes(keyword)) {
           const response = {
+            setID: setID,
             animation: animation && animation.id,
             dancer: dancer && dancer.id,
             modals: modals && modals.map(mdl => mdl.id),
@@ -178,7 +182,11 @@ function playResponseQueue(queue) {
       return;
     }
   }
-  const { animation, dancer, modals } = queue.shift(); // get next set
+  const { setID, animation, dancer, modals } = queue.shift(); // get next set
+  if (setID === 'reset') {
+    playResetResponse();
+    return;
+  }
   if (animation) {
     const element = assets[animation];
     const asset = element.childNodes[0];
@@ -223,7 +231,7 @@ function renderElement(container, element) {
     textContainer.innerHTML = '';
     TYPING_INTERVAL = setInterval(handleTypingAnimation, modulateTypeSpeed(-50, 200), textContainer);
   } else if (element.classList.contains('auli-blink')) {
-    element.style.animationDuration = `${modulateTypeSpeed(0, 300) * 4 / 1000}s`;
+    element.style.animationDuration = `${modulateTypeSpeed(200, 600) * 4 / 500}s`;
   }
 }
 

@@ -92,7 +92,7 @@ body {
   mix-blend-mode: multiply;
   pointer-events: none;
   left: 0;
-  bottom: -5rem;
+  bottom: -3rem;
   display: none !important; /* appear in desktop only */
 }
 
@@ -136,7 +136,7 @@ body {
   #auli-info {
     max-width: 325px;
     max-height: 100%;
-    padding: 6rem 0 9rem;
+    padding: 6rem 0 12rem;
     grid-template-columns: 1fr;
     grid-template-rows: 2.5rem auto 1fr;
     grid-template-areas:
@@ -289,6 +289,14 @@ body {
   color: #6dc3cc;
 }
 
+.auli-scroll-loop > *:first-child {
+  padding-top: 8rem;
+}
+
+.auli-scroll-loop > *:last-child {
+  padding-bottom: 8rem;
+}
+
 .auli-blink {
   animation: blink;
   animation-iteration-count: infinite;
@@ -321,11 +329,11 @@ body {
 }
 
 .scroll-pinkblue {
-  color: #d197c4 !important;
+  color: #e6bfbd !important;
 }
 
 .scroll-pinkblue a {
-  color: #6dc3cc !important;
+  color: #cfeded !important;
 }
 
 /* shadow effects */
@@ -387,15 +395,15 @@ body {
 /*** css animations ***/
 @keyframes blink {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   49.9% {
-    opacity: 0;
+    opacity: 1;
   }
   50% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
