@@ -1,0 +1,28 @@
+[
+  {
+    "id": "r05m01",
+    "type": "html",
+    "effect": "typing",
+    "src": "<p>hhhrrrrrrr >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> </p>",
+    "styles": {
+      "bottom": "0rem",
+      "left": "10vw",
+      "fontSize": "3rem",
+      "boxShadow": "none",
+      "background": "none"
+    }
+  },
+  {
+    "id": "r05m02",
+    "type": "html",
+    "effect": "blink",
+    "src": "<p>There</p>",
+    "styles": {
+      "bottom": "0rem",
+      "right": "15vw",
+      "fontSize": "3rem",
+      "boxShadow": "none",
+      "background": "none"
+    }
+  }
+]

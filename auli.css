@@ -320,20 +320,34 @@ body {
 }
 
 /* exceptions */
-.battery-img {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
 .scroll-pinkblue {
   color: #e6bfbd !important;
 }
 
 .scroll-pinkblue a {
   color: #cfeded !important;
+}
+
+.auli-typing-and-blink {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  /* max-width: calc(3.494vw * 24.40789); */
+  /* font-size: 3.494vw; */
+  font-size: 0.95rem;
+  max-width: 375px;
+  margin-bottom: 2rem !important;
+}
+
+.auli-typing-and-blink .auli-typing-wrapper {
+  display: inline-block;
+  width: 100%;
+  /* display: none; */
+}
+
+.auli-typing-and-blink .auli-blink {
+  display: inline-block;
+  /* display: none; */
 }
 
 /* shadow effects */
@@ -358,6 +372,20 @@ body {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .auli-typing-and-blink {
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .flex-modal-content {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
 /*** desktop component styles ***/
 @media screen and (min-width: 1240px) {
   #auli-title-card {
@@ -375,6 +403,23 @@ body {
   #auli-reset {
     padding: 0;
     justify-content: center;
+  }
+
+  .auli-typing-and-blink {
+    font-size: 3rem;
+    max-width: none;
+  }
+
+  .flex-modal-content {
+    flex-grow: 1;
+    max-width: 1240px;
+    z-index: 20 !important;
+    justify-self: center;
+  }
+
+  .flex-modal-content .bg-shadow {
+    display: none;
+
   }
 }
 

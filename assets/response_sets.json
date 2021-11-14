@@ -167,29 +167,12 @@
     },
     "modals": [
       {
-        "id": "r05m01",
+        "id": "r05m00",
         "type": "html",
-        "effect": "typing",
-        "src": "<p>hhhrrrrrrr >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> </p>",
+        "effect": "typing-and-blink",
+        "src": "<span class='auli-typing-wrapper'><span class='auli-typing'>hhhrrrrrrr >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> </span></span><span class='auli-blink' style='animation-duration:3s;'>THERE</span>",
         "styles": {
-          "bottom": "0rem",
-          "left": "10vw",
-          "fontSize": "3rem",
-          "boxShadow": "none",
-          "background": "none"
-        }
-      },
-      {
-        "id": "r05m02",
-        "type": "html",
-        "effect": "blink",
-        "src": "<p>There</p>",
-        "styles": {
-          "bottom": "0rem",
-          "right": "15vw",
-          "fontSize": "3rem",
-          "boxShadow": "none",
-          "background": "none"
+          "bottom": "1rem"
         }
       },
       {

@@ -135,7 +135,6 @@ function initAssets() {
             container.appendChild(effectContainer);
             if (styles) applyStyles(styles, container);
             container.appendChild(bgShadow);
-
           }
           assets[id] = container;
         });
@@ -248,6 +247,12 @@ function renderElement(container, element) {
     TYPING_INTERVAL = setInterval(handleTypingAnimation, modulateTypeSpeed(-50, 200), textContainer);
   } else if (element.childNodes[0].classList.contains('auli-blink')) {
     element.childNodes[0].style.animationDuration = `${modulateTypeSpeed(200, 600) * 4 / 500}s`;
+  } else if (element.childNodes[0].classList.contains('auli-typing-and-blink')) {
+    element.classList.add('flex-modal-content');
+    const textContainer = element.querySelector('span.auli-typing');
+    TYPING_TARGET_TEXT = textContainer.innerText;
+    textContainer.innerHTML = '';
+    TYPING_INTERVAL = setInterval(handleTypingAnimation, modulateTypeSpeed(-50, 200), textContainer);
   }
 }
 
