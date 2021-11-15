@@ -61,7 +61,8 @@ function initAssets() {
     const video = document.createElement('video');
     video.src = `./assets/content/${src}`;
     video.playsInline = true;
-    video.loop = config && config.loop ? config.loop : false;
+    // video.loop = config && config.loop ? config.loop : false;
+    video.loop = true;
     video.muted = config && config.sound ? !config.sound : true;
     video.preload = 'auto';
     video.load();
@@ -105,19 +106,24 @@ function initAssets() {
             container.appendChild(video);
             if (styles) applyStyles(styles, container);
           } else if (type === 'image') {
-            container.classList.add('auli-image-container');
-            const image = initImage(src);
-            container.appendChild(image);
-            if (styles) applyStyles(styles, container);
             if (effect) {
               if (effect === 'double-image') {
-                container.appendChild(initImage(src));
+                src.forEach(url => {
+                  const image = initImage(url);
+                  container.appendChild(image);
+                });
+                container.style.margin = '0 auto';
               } else {
                 effect.split(', ').forEach(cls => {
                   container.classList.add(`auli-${cls}`);
-                });
+                })
               }
+            } else {
+              container.classList.add('auli-image-container');
+              const image = initImage(src);
+              container.appendChild(image);
             }
+            if (styles) applyStyles(styles, container);
           } else if (type === 'html') {
             container.classList.add('auli-modal-content');
             const effectContainer = document.createElement('div');
@@ -149,7 +155,11 @@ function handleKeyboardShortcuts(event) {
   if (
     event.code === 'Enter' &&
     document.activeElement === CHAT_INPUT
-  ) processUserMessage();
+  ) {
+    processUserMessage();
+  } else {
+    CHAT_INPUT.focus();
+  }
 }
 
 function processUserMessage() {
@@ -163,13 +173,14 @@ function processUserMessage() {
 function generateResponseQueue(message) {
   const queue = [];
   responseSets.forEach(({
-    setID, keywords, animation, dancer, modals
+    setID, duration, keywords, animation, dancer, modals
   }) => {
     if (keywords) {
       keywords.forEach(keyword => {
         if (message.includes(keyword)) {
           const response = {
-            setID: setID,
+            setID,
+            duration,
             animation: animation && animation.id,
             dancer: dancer && dancer.id,
             modals: modals && modals.map(mdl => mdl.id),
@@ -185,74 +196,59 @@ function generateResponseQueue(message) {
 }
 
 function playResponseQueue(queue) {
-  const handleVideoEnd = event => {
-    if (queue.length > 0) {
-      playResponseQueue(queue); //continue recursion
-    } else {
-      if (event) {
-        event.target.loop = true;
-        event.target.play();
-        event.target.removeEventListener('ended', handleVideoEnd);
-      }
-      return;
-    }
-  }
-  const { setID, animation, dancer, modals } = queue.shift(); // get next set
+  const { setID, duration, animation, dancer, modals } = queue.shift();
   if (setID === 'reset') {
     playResetResponse();
     return;
   }
   if (animation) {
-    const element = assets[animation];
-    const asset = element.childNodes[0];
-    if (asset.tagName === 'VIDEO') {
-      asset.loop = false;
-      asset.addEventListener('ended', handleVideoEnd);
-    } else if (asset.tagName === 'IMG') {
-      setTimeout(handleVideoEnd, GIF_TIMEOUT_DURATION);
-    }
     clearContainer(AULI_ANIMATION);
-    renderElement(AULI_ANIMATION, element);
+    renderContent(AULI_ANIMATION, assets[animation]);
   }
   if (dancer) {
     clearContainer(AULI_DANCER);
-    renderElement(AULI_DANCER, assets[dancer]);
+    renderContent(AULI_DANCER, assets[dancer]);
   }
   if (modals) {
     clearContainer(AULI_MODAL_CONTAINER);
     resetTextAnimations();
-    modals.forEach(modal =>
-      renderElement(AULI_MODAL_CONTAINER, assets[modal])
-    );
+    modals.forEach(modal => {
+      renderContent(AULI_MODAL_CONTAINER, assets[modal]);
+    })
   }
+  // begin countdown to play next response
+  setTimeout(() => {
+    if (queue.length > 0) playResponseQueue(queue); //play next response
+  }, duration);
 }
 
 function clearContainer(container) {
   container.innerHTML = '';
 }
 
-function renderElement(container, element) {
-  container.appendChild(element);
-  if (element.classList.contains('auli-video-container')) {
-    const video = element.querySelector('video');
+function renderContent(container, content) {
+  container.appendChild(content);
+  // play video
+  if (container.querySelector('.auli-video-container')) {
+    const video = container.querySelector('video');
     video.currentTime = 0;
     video.play();
-  } else if (element.childNodes[0].classList.contains('auli-scroll-loop')) {
-    element.scrollTop = 0;
-    SCROLL_LOOP_INTERVAL = setInterval(handleScrollLoop, SCROLL_SPEED, element.childNodes[0]);
-  } else if (element.childNodes[0].classList.contains('auli-typing')) {
-    const textContainer = element.querySelector('p');
+    return;
+  }
+  if (container.querySelector('.auli-scroll-loop')) {
+    const scrollLoop = container.querySelector('.auli-scroll-loop');
+    scrollLoop.scrollTop = 0;
+    SCROLL_LOOP_INTERVAL = setInterval(handleScrollLoop, SCROLL_SPEED, scrollLoop);
+    return;
+  }
+  if (container.querySelector('.auli-typing')) {
+    content.classList.add('flex-modal-content');
+    const textContainer = container.querySelector('.auli-typing p');
     TYPING_TARGET_TEXT = textContainer.innerText;
     textContainer.innerHTML = '';
-    TYPING_INTERVAL = setInterval(handleTypingAnimation, modulateTypeSpeed(-50, 200), textContainer);
-  } else if (element.childNodes[0].classList.contains('auli-blink')) {
-    element.childNodes[0].style.animationDuration = `${modulateTypeSpeed(200, 600) * 4 / 500}s`;
-  } else if (element.childNodes[0].classList.contains('auli-typing-and-blink')) {
-    element.classList.add('flex-modal-content');
-    const textContainer = element.querySelector('span.auli-typing');
-    TYPING_TARGET_TEXT = textContainer.innerText;
-    textContainer.innerHTML = '';
-    TYPING_INTERVAL = setInterval(handleTypingAnimation, modulateTypeSpeed(-50, 200), textContainer);
+    const typeRate = modulateTypeSpeed(-50, 200); //milliseconds
+    TYPING_INTERVAL = setInterval(handleTypingAnimation, typeRate, textContainer);
+    return;
   }
 }
 

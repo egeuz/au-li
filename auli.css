@@ -22,6 +22,14 @@ body {
   font-family: "Favorit";
   src: url("./assets/fonts/Favorit_Regular.woff2") format("woff2"),
     url("./assets/fonts/Favorit_Regular.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Favorit";
+  src: url("./assets//fonts/Favorit_Regular-Italic.woff2") format("woff2"),
+    url("./assets//fonts/Favorit_Regular-Italic.woff") format("woff");
+  font-style: italic;
 }
 
 @font-face {
@@ -35,6 +43,10 @@ body {
 #auli span,
 #auli input {
   font-family: "Favorit", sans-serif;
+}
+
+#auli-p {
+  margin: 0;
 }
 
 #auli a {
@@ -136,7 +148,7 @@ body {
   #auli-info {
     max-width: 325px;
     max-height: 100%;
-    padding: 6rem 0 12rem;
+    padding: 9vh 0 18vh;
     grid-template-columns: 1fr;
     grid-template-rows: 2.5rem auto 1fr;
     grid-template-areas:
@@ -150,11 +162,10 @@ body {
   #auli-interface {
     position: relative;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 8rem 1rem 10rem;
-    /* margin-top: 8rem; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    padding: 9vh 1rem 0;
   }
 
   #auli-modals {
@@ -231,13 +242,7 @@ body {
 #auli-animation {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
-}
-
-#auli-animation video,
-#auli-animation img {
-  position: relative;
-  z-index: 12; /* to avoid clipping with shade */
+  margin: 0 auto 5vh;
 }
 
 #auli-dancer video,
@@ -300,6 +305,7 @@ body {
   animation: blink;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
+  animation-duration: 2s; /* default */
 }
 
 .auli-scroll-frame {
@@ -327,22 +333,36 @@ body {
   color: #cfeded !important;
 }
 
-.auli-typing-and-blink {
+.auli-typing-blink {
   display: flex;
   flex-grow: 1;
   width: 100%;
-  font-size: 0.95rem;
   max-width: 375px;
   margin-bottom: 2rem !important;
 }
 
-.auli-typing-and-blink .auli-typing-wrapper {
-  display: inline-block;
-  width: 100%;
+.auli-typing-blink p {
+  font-size: 0.95rem;
 }
 
-.auli-typing-and-blink .auli-blink {
+.auli-typing-blink .auli-typing {
+  width: 100%;
+  font-style: italic;
+}
+
+.auli-typing-blink .auli-blink {
   display: inline-block;
+}
+
+/*** for wide screens with low height ***/
+@media (max-height: 800px) {
+  #auli-interface {
+    padding: 0 1rem 2rem;
+  }
+
+  #auli-animation {
+    margin-bottom: 0;
+  }
 }
 
 /* shadow effects */
@@ -368,10 +388,12 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-  .auli-typing-and-blink {
-    font-size: 1.5rem;
-    width: 100%;
+  .auli-typing-blink {
     max-width: 600px;
+  }
+
+  .auli-typing-blink p {
+    font-size: 1.5rem;
   }
 
   .flex-modal-content {
@@ -400,9 +422,12 @@ body {
     justify-content: center;
   }
 
-  .auli-typing-and-blink {
-    font-size: 3rem;
+  .auli-typing-blink {
     max-width: none;
+  }
+
+  .auli-typing-blink p {
+    font-size: 3rem;
   }
 
   .flex-modal-content {
