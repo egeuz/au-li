@@ -138,7 +138,7 @@ body {
 }
 
 /* desktop+ layout */
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   #auli {
     height: 100vh;
     display: flex;
@@ -196,6 +196,12 @@ body {
   width: 100%;
 }
 
+#auli-dancer video,
+#auli-dancer img {
+  display: block;
+  margin: 0 auto;
+}
+
 #auli-title-card {
   grid-area: title;
   padding: 2rem;
@@ -243,12 +249,8 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 0 auto 5vh;
-}
-
-#auli-dancer video,
-#auli-dancer img {
-  display: block;
-  margin: 0 auto;
+  position: relative;
+  z-index: 13;
 }
 
 #auli-dancer {
@@ -310,7 +312,6 @@ body {
 
 .auli-scroll-frame {
   overflow-y: scroll;
-  z-index: 11;
   right: 10%;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -404,7 +405,7 @@ body {
 }
 
 /*** desktop component styles ***/
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
   #auli-title-card {
     padding: 2rem 0;
   }

@@ -208,8 +208,7 @@
           "maxWidth": "350px",
           "height": "auto",
           "right": "20vw",
-          "bottom": "0",
-          "zIndex": "13"
+          "bottom": "0"
         }
       }
     ]
@@ -236,7 +235,7 @@
       {
         "id": "r07m01",
         "type": "html",
-        "src": "<p>Invisible bodies, by definition, can be done away much more easily than visible ones. Since <a href='https://www.nytimes.com/2021/05/06/business/lithium-mining-race.html' target='_blank' rel='noopener noreferrer'>angels</a>, <a href='https://www.theguardian.com/commentisfree/2021/jun/14/electric-cost-lithium-mining-decarbonasation-salt-flats-chile' target='_blank' rel='noopener noreferrer'>ghosts</a>, <a href='https://www.greenbiz.com/article/lithium-mining-booming-heres-how-manage-its-impact' target='_blank' rel='noopener noreferrer'>demons</a>, <a href='https://www.investopedia.com/investing/lithium-mining-dirty-investment-or-sustainable-business/' target='_blank' rel='noopener noreferrer'>ancestors</a>, <a href='https://insideclimatenews.org/news/07112021/lithium-mining-thacker-pass-nevada-electric-vehicles-climate/' target='_blank' rel='noopener noreferrer'>ghouls</a> <a href='https://miningglobal.com/top10/5-largest-lithium-mining-companies-world' target='_blank' rel='noopener noreferrer'>and the like</a> take up no space in our empirical world, the liquidation of them involves <a href='https://www.theguardian.com/environment/2021/jan/03/child-labour-toxic-leaks-the-price-we-could-pay-for-a-greener-future' target='_blank' rel='noopener noreferrer'>no bloodletting</a>, leaves <a href='https://www.wired.co.uk/article/lithium-batteries-environment-impact' target='_blank' rel='noopener noreferrer'>no corpses</a>, and calls for <a href='https://www.amnesty.org/en/latest/news/2016/01/child-labour-behind-smart-phone-and-electric-car-batteries/' target='_blank' rel='noopener noreferrer'>no official inquiry</a>.  Whenever such <a href='https://www.greentechmedia.com/articles/read/green-battery-revolution-powering-social-and-environmental-risks' target='_blank' rel='noopener noreferrer'>invisible bodies</a> are being <a href='https://www.forbes.com/sites/michaelposner/2020/10/07/how-tesla-should-combat-child-labor-in-the-democratic-republic-of-the-congo/?sh=71eda1945cd0' target='_blank' rel='noopener noreferrer'>deleted from the 'chain of being'</a> long believed in by <a href='https://www.ft.com/content/c6909812-9ce4-11e9-9c06-a4640c9feebb' target='_blank' rel='noopener noreferrer'>a given people</a>, that <a href='https://www.humanium.org/en/the-impact-of-covid-19-on-child-labour-in-cobalt-mines-in-the-drc/' target='_blank' rel='noopener noreferrer'>act of erasure</a> is a sure sign that the aspiration to be recognized as 'modern' has gotten strong among them. <br> – William Lafleur</p>",
+        "src": "<p>Invisible bodies, by definition, can be done away much more easily than visible ones. Since <a href='https://www.nytimes.com/2021/05/06/business/lithium-mining-race.html' target='_blank' rel='noopener noreferrer'>angels</a>, <a href='https://www.theguardian.com/commentisfree/2021/jun/14/electric-cost-lithium-mining-decarbonasation-salt-flats-chile' target='_blank' rel='noopener noreferrer'>ghosts</a>, <a href='https://www.greenbiz.com/article/lithium-mining-booming-heres-how-manage-its-impact' target='_blank' rel='noopener noreferrer'>demons</a>, <a href='https://www.investopedia.com/investing/lithium-mining-dirty-investment-or-sustainable-business/' target='_blank' rel='noopener noreferrer'>ancestors</a>, <a href='https://insideclimatenews.org/news/07112021/lithium-mining-thacker-pass-nevada-electric-vehicles-climate/' target='_blank' rel='noopener noreferrer'>ghouls</a> <a href='https://miningglobal.com/top10/5-largest-lithium-mining-companies-world' target='_blank' rel='noopener noreferrer'>and the like</a> take up no space in our empirical world, the liquidation of them involves <a href='https://www.theguardian.com/environment/2021/jan/03/child-labour-toxic-leaks-the-price-we-could-pay-for-a-greener-future' target='_blank' rel='noopener noreferrer'>no bloodletting</a>, leaves <a href='https://www.wired.co.uk/article/lithium-batteries-environment-impact' target='_blank' rel='noopener noreferrer'>no corpses</a>, and calls for <a href='https://www.amnesty.org/en/latest/news/2016/01/child-labour-behind-smart-phone-and-electric-car-batteries/' target='_blank' rel='noopener noreferrer'>no official inquiry</a>.  Whenever such <a href='https://www.greentechmedia.com/articles/read/green-battery-revolution-powering-social-and-environmental-risks' target='_blank' rel='noopener noreferrer'>invisible bodies</a> are being <a href='https://www.forbes.com/sites/michaelposner/2020/10/07/how-tesla-should-combat-child-labor-in-the-democratic-republic-of-the-congo/?sh=71eda1945cd0' target='_blank' rel='noopener noreferrer'>deleted from the 'chain of being'</a> long believed in by <a href='https://www.ft.com/content/c6909812-9ce4-11e9-9c06-a4640c9feebb' target='_blank' rel='noopener noreferrer'>a given people</a>, that <a href='https://www.humanium.org/en/the-impact-of-covid-19-on-child-labour-in-cobalt-mines-in-the-drc/' target='_blank' rel='noopener noreferrer'>act of erasure</a> is a sure sign that the aspiration to be recognized as 'modern' has gotten strong among them. <br><br> – William Lafleur</p>",
         "styles": {
           "color": "#e6bfbd",
           "maxWidth": "500px",
@@ -336,7 +335,8 @@
           "left": "10%",
           "maxHeight": "175px",
           "top": "calc(60vh - 87.75px)"
-        }
+        },
+        "extlink": "http://jenliu.info/gold_loop.html"
       }
     ]
   },
@@ -434,13 +434,14 @@
           "height": "auto",
           "right": "10%",
           "alignSelf": "center"
-        }
+        },
+        "extlink": "http://jenliu.info/gold_loop.html"
       },
       {
         "id": "r13m02",
         "type": "video",
         "src": "DUCKS_2.mp4",
-        "config": { "sound": true, "loop": true },
+        "config": { "sound": false, "loop": true },
         "styles": {
           "max-width": "275px",
           "height": "auto",
@@ -519,7 +520,8 @@
           "height": "auto",
           "bottom": "25%",
           "left": "5%"
-        }
+        },
+        "extlink": "http://jenliu.info/gold_loop.html"
       }
     ]
   },
@@ -532,7 +534,7 @@
       "type": "image",
       "src": "8IuC.gif",
       "styles": {
-        "transform": "translateY(7.5vw)"
+        "marginTop": "7.5vh"
       }
     },
     "dancer": {

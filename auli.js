@@ -97,31 +97,37 @@ function initAssets() {
       if (key !== 'keywords' && val) {
         const contents = key === 'modals' ? val : [val];
         contents.forEach(content => {
-          const { id, type, src, styles, effect, config } = content;
+          const { id, type, src, styles, effect, config, extlink } = content;
           const container = document.createElement('div');
           if (type === 'video') {
             container.classList.add('auli-video-container');
             container.classList.add('intrinsic-ignore');
             const video = initVideo(src, config);
-            container.appendChild(video);
+            if (extlink) {
+              const linkWrapper = document.createElement('a');
+              linkWrapper.href = extlink;
+              linkWrapper.target = '_blank';
+              linkWrapper.rel = 'noopener noreferrer';
+              linkWrapper.appendChild(video);
+              container.appendChild(linkWrapper);
+            } else {
+              container.appendChild(video);
+            }
             if (styles) applyStyles(styles, container);
           } else if (type === 'image') {
-            if (effect) {
-              if (effect === 'double-image') {
-                src.forEach(url => {
-                  const image = initImage(url);
-                  container.appendChild(image);
-                });
-                container.style.margin = '0 auto';
-              } else {
-                effect.split(', ').forEach(cls => {
-                  container.classList.add(`auli-${cls}`);
-                })
-              }
-            } else {
-              container.classList.add('auli-image-container');
-              const image = initImage(src);
+            container.classList.add('auli-image-container');
+            const urls = typeof src === 'string' ? [src] : src;
+            urls.forEach(url => {
+              const image = initImage(url);
               container.appendChild(image);
+            });
+            if (effect) {
+              effect.split(', ').forEach(cls => {
+                container.classList.add(`auli-${cls}`);
+                if (effect === 'double-image') {
+                  container.style.margin = '0 auto';
+                }
+              })
             }
             if (styles) applyStyles(styles, container);
           } else if (type === 'html') {
@@ -217,6 +223,7 @@ function playResponseQueue(queue) {
     })
   }
   // begin countdown to play next response
+  console.log(duration);
   setTimeout(() => {
     if (queue.length > 0) playResponseQueue(queue); //play next response
   }, duration);
@@ -230,31 +237,30 @@ function renderContent(container, content) {
   container.appendChild(content);
   // play video
   if (container.querySelector('.auli-video-container')) {
-    const video = container.querySelector('video');
+    const video = content.querySelector('video');
     video.currentTime = 0;
+    video.loop = true;
     video.play();
-    return;
-  }
-  if (container.querySelector('.auli-scroll-loop')) {
+    // return;
+  } else if (container.querySelector('.auli-scroll-loop')) {
     const scrollLoop = container.querySelector('.auli-scroll-loop');
     scrollLoop.scrollTop = 0;
     SCROLL_LOOP_INTERVAL = setInterval(handleScrollLoop, SCROLL_SPEED, scrollLoop);
-    return;
-  }
-  if (container.querySelector('.auli-typing')) {
+    // return;
+  } else if (container.querySelector('.auli-typing')) {
     content.classList.add('flex-modal-content');
     const textContainer = container.querySelector('.auli-typing p');
     TYPING_TARGET_TEXT = textContainer.innerText;
     textContainer.innerHTML = '';
     const typeRate = modulateTypeSpeed(-50, 200); //milliseconds
     TYPING_INTERVAL = setInterval(handleTypingAnimation, typeRate, textContainer);
-    return;
+    // return;
   }
 }
 
 function playResetResponse() {
   const resetSet = responseSets.find(set => set.setID === 'reset');
-  const resetRes = { animation: resetSet.animation.id };
+  const resetRes = { animation: resetSet.animation.id, duration: resetSet.duration };
   const idleSet = responseSets.find(set => set.setID === 'idle');
   const idleRes = {
     animation: idleSet.animation.id,
