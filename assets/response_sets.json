@@ -60,7 +60,7 @@
   {
     "setID": "02",
     "duration": 28000,
-    "keywords": "rip, torn, smash, splat, broke, broken, strike, resist, insurrection, break, storm, charge, attack, war, battle, fight, fist, flag, trench, cannon, combat, protest, violent, conflict, polar, confused, question, answer, resolve, dizzy, sick, delirious, faint, whelm, siege, riot, massacre, skirmish, shoot, stab, guerilla, underground, activis, union, organize, nauseous, vomit, grave, burial, mass, black, white, brown, vietnam, mexic, america, indigenous, native, genocide, chile, guatemala, peru, brazil, colombia, argentina, bolivia, guyana, phillipin, thailand, cambodia",
+    "keywords": "rip, torn, smash, splat, broke, broken, strike, resist, insurrection, break, storm, charge, attack, war, battle, fight, fist, flag, trench, cannon, combat, protest, violent, conflict, polar, confused, question, answer, resolve, dizzy, sick, delirious, faint, whelm, siege, riot, massacre, skirmish, shoot, stab, guerilla, underground, activis, union, organize, nauseous, vomit, grave, burial, mass, black, white, brown, vietnam, mexic, america, indigenous, native, genocide, chile, guatemala, peru, brazil, colombia, argentina, bolivia, guyana, phillipin, thailand, cambodia, meaning",
     "animation": {
       "id": "anim_02",
       "type": "video",
@@ -188,7 +188,7 @@
   {
     "setID": "06",
     "duration": 34000,
-    "keywords": "water, ocean, river, lake, h2o, tear, cry, wet, moist, precipitat, rain, snow, storm, hurricane, flood, condition, mist, humid,  tongue, blood, puss, seep, weep, sad, river, wave, coast, tsunami, drown, swim, sink, fish, whale, dolphin, island, jell, clam, oyster, pond, salmon, tuna, grouper, anchor, current, pool, whirl, sop, soup, fog, drip, condens, drizzl, crab, beach, sand, float, suspen, sprinkl, hydro, solu, aqua, under, jungle, swamp, creek, vine, snake, boat, paddle, kayak, pontoon, pollut, climat, crisis, carrion, corpse",
+    "keywords": "water, ocean, river, lake, h2o, tear, cry, wet, moist, precipitat, rain, snow, storm, hurricane, flood, condition, mist, humid,  tongue, blood, puss, seep, weep, sad, river, wave, coast, tsunami, drown, swim, sink, fish, whale, dolphin, island, jell, clam, oyster, pond, salmon, tuna, grouper, anchor, current, pool, whirl, sop, soup, fog, drip, condens, drizzl, crab, beach, sand, float, suspen, sprinkl, hydro, solu, aqua, under, jungle, swamp, creek, vine, snake, boat, paddle, kayak, pontoon, pollut, climat, crisis, carrion,  corpse, sweat, soda, juice, fluid, efflu, brine",
     "animation": {
       "id": "anim_08",
       "type": "video",
@@ -217,7 +217,7 @@
   {
     "setID": "07",
     "duration": 51000,
-    "keywords": "transport, logistic, boat, ship, container, slave, trade, rout, merchant, italy, italian, dutch, india, colon, serf, subject, expansion, genocide, smallpox, invasi, incursion, amazon, casco, navy, sail, overboard, gangplank, pira, steal, stolen, pillage, exract, mine, mining, initiative, pipline, mission, agreement, resolution, rout, harmon, standard, IBAN, scan, histor, product, consum, anchor, station, rope, knot, carriage, port, tariff, tax, language",
+    "keywords": "transport, logistic, boat, ship, container, slave, trade, rout, merchant, italy, italian, dutch, india, colon, serf, subject, expansion, genocide, smallpox, invasi, incursion, amazon, casco, navy, sail, overboard, gangplank, pira, steal, stolen, pillage, exract, mine, mining, initiative, pipline, mission, agreement, resolution, rout, harmon, standard, IBAN, scan, histor, product, consum, anchor, station, rope, knot, carriage, port, tariff, tax, language, ISBN, trading, exploit, journey, odyssey, travail, adventur",
     "animation": {
       "id": "anim_08",
       "type": "video",
@@ -343,7 +343,7 @@
   {
     "setID": "11",
     "duration": 42000,
-    "keywords": "lithium, technology, computer, phone, tablet, social, email, DM, message, point, purpose, keyboard, screen, print, type, scan, email, mouse, click, eye, scroll, social, media, news, tiktok, facebook, instagram, electronic, gadget, digital, wire, cord, electric, spark, static, signal, laser, work, smart, engine, web, site, online, commerce, ebay, craigslist, brand, archive, server, digitize, digitization, content, nigeria, congo, ethiopia, tanzania, africa, uganda, algeria, morocc, sudan, turk, today, danc",
+    "keywords": "lithium, technology, computer, phone, tablet, social, email, DM, message, point, purpose, keyboard, screen, print, type, scan, email, mouse, click, eye, scroll, social, media, news, tiktok, facebook, instagram, electronic, gadget, digital, wire, cord, electric, spark, static, signal, laser, work, smart, engine, web, site, online, commerce, ebay, craigslist, brand, archive, server, digitize, digitization, content, nigeria, congo, ethiopia, tanzania, africa, uganda, algeria, morocc, sudan, turk, today, danc, poison, toxic, acid, process, factor, industr",
     "animation": {
       "id": "anim_e01",
       "type": "video",
@@ -376,7 +376,7 @@
   {
     "setID": "12",
     "duration": 66000,
-    "keywords": "vehicle, power, response, click, extract, engineer, print, email, message, ping, direct, social, community, village, silicon, valley, mount, francisco, supertino, oakland, program, typing, qwerty, basic, complicat, vitro, lab, petri, biolistic, transfect, incubat, cell, stem, muscle, smooth, striat, accumulat, assist, coat, separat, micro, macro, neo, hyper, mega, maxi, wheel, brake, steer, turn, corner, accident, incident, circuit, network, conglomerate",
+    "keywords": "vehicle, power, response, click, extract, engineer, print, email, message, ping, direct, social, community, village, silicon, valley, mount, francisco, supertino, oakland, program, typing, qwerty, basic, complicat, vitro, lab, petri, biolistic, transfect, incubat, cell, stem, muscle, smooth, striat, accumulat, assist, coat, separat, micro, macro, neo, hyper, mega, maxi, wheel, brake, steer, turn, corner, accident, incident, circuit, network, conglomerate, cycle, circle, circular",
     "animation": {
       "id": "anim_06",
       "type": "video",
@@ -486,7 +486,7 @@
   {
     "setID": "15",
     "duration": 120000,
-    "keywords": "surveil, watch, brother, movie, film, therapy, entertain, ticket, research, know, informat, learn, educat, teach, student, school, class, text, book, look, stare, window, spy, stalk, follow, track, screen, gaz, trail, shadow, hack, replic, observ, see, sight, target, chart, data, quant, qual, crew, light, lens, direct, assist, record, archiv, librar, stor, fil, ball, book, article, essay, text, fiche, intel, page, para, meta, hermen, dasein, being, sav, record, polic, soldier, army, troop, insurg, bomb, blob, razor, baton, cannon, tank, tactic, strateg",
+    "keywords": "surveil, watch, brother, movie, film, therapy, entertain, ticket, research, know, informat, learn, educat, teach, student, school, class, text, book, look, stare, window, spy, stalk, follow, track, screen, gaz, trail, shadow, hack, replic, observ, see, sight, target, chart, data, quant, qual, crew, light, lens, direct, assist, record, archiv, librar, stor, fil, ball, book, article, essay, text, fiche, intel, page, para, meta, hermen, dasein, being, sav, record, polic, soldier, army, troop, insurg, bomb, blob, razor, baton, cannon, tank, tactic, strateg, love, fond, like, relation, boyfriend, girlfriend, queer, lesbian, queen, sex",
     "animation": {
       "id": "anim_06",
       "type": "video",
@@ -526,7 +526,7 @@
   {
     "setID": "16",
     "duration": 45000,
-    "keywords": "cartoon, crayon, charcoal, pencil, gesture, aller, museum, exhibit, show, curator, install, hang, sculpture, creative, make, workshop, writ, modern, illustrate, sketch, draw, represent, paint, represent, abstract, liter, copy, duplicate, xerox, again, repeat, poet, fiction, contemp, fine, studio, residen, acryl, oil, sculpt, wood, metal, cast, bronz, glass, resin, plastic, carv, stack, pil, model, mus, impress, avant, magaz, book, essay, print, photo, video, riso, anim, circus, extr, intro, spect, glass, ceramic, artist, author, auteur, creat, interpret, render, model, style, fashion, makeup, tint, sticj, blush, shadow, shade, pastel",
+    "keywords": "cartoon, crayon, charcoal, pencil, gesture, aller, museum, exhibit, show, curator, install, hang, sculpture, creative, make, workshop, writ, modern, illustrate, sketch, draw, represent, paint, represent, abstract, liter, copy, duplicate, xerox, again, repeat, poet, fiction, contemp, fine, studio, residen, acryl, oil, sculpt, wood, metal, cast, bronz, glass, resin, plastic, carv, stack, pil, model, mus, impress, avant, magaz, book, essay, print, photo, video, riso, anim, circus, extr, intro, spect, glass, ceramic, artist, author, auteur, creat, interpret, render, model, style, fashion, makeup, tint, stick, blush, shadow, shade, pastel",
     "animation": {
       "id": "anim_g03",
       "type": "image",
