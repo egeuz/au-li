@@ -223,7 +223,6 @@ function playResponseQueue(queue) {
     })
   }
   // begin countdown to play next response
-  console.log(duration);
   setTimeout(() => {
     if (queue.length > 0) playResponseQueue(queue); //play next response
   }, duration);

@@ -222,7 +222,8 @@
       "type": "video",
       "src": "anim_08_ocean.mp4",
       "styles": {
-        "transform": "scale(1.5)"
+        "transform": "scale(1.5)",
+        "marginBottom": "2rem"
       }
     },
     "dancer": {
@@ -254,20 +255,21 @@
       "type": "video",
       "src": "anim_03_break.mp4"
     },
-    "dancer": {
-      "id": "dancer_i01",
-      "type": "image",
-      "src": "QR_1.jpg",
-      "styles": {
-        "maxWidth": "180px",
-        "zIndex": "16",
-        "position": "relative",
-        "margin-bottom": "16px"
-      }
-    },
+    "dancer": "",
     "modals": [
       {
         "id": "r08m01",
+        "type": "image",
+        "src": "QR_1.jpg",
+        "styles": {
+          "maxWidth": "180px",
+          "maxHeight": "180px",
+          "bottom": "17rem",
+          "left": "calc(47.5% + 90px)"
+        }
+      },
+      {
+        "id": "r08m02",
         "type": "html",
         "effect": "scroll-loop",
         "styles": {
@@ -302,9 +304,10 @@
         "src": "QR_2.jpg",
         "styles": {
           "maxWidth": "180px",
+          "maxHeight": "180px",
           "zIndex": "16",
-          "position": "relative",
-          "margin-bottom": "16px"
+          "bottom": "10vh",
+          "left": "calc(50vw - 90px - 162.5px)"
         }
       }
     ]
@@ -363,7 +366,7 @@
         "effect": "blink",
         "src": "<a href='http://jenliu.info/gold_loop_2.html' target='_blank' rel='noopener noreferrer'><p>“Dance you shall,” said he, “dance in your red shoes till you are pale and cold, till your skin shrivels up and you are a skeleton!</p><p>Dance you shall, from door to door, and where proud and wicked children live you shall knock, so that they may hear you and fear you!</p><p>Dance you shall, dance—!”</p><p>“Mercy!” cried Karen.</p></a>",
         "styles": {
-          "max-width": "300px",
+          "maxWidth": "300px",
           "color": "#cfeded",
           "bottom": "0",
           "right": "25%",
@@ -418,7 +421,7 @@
       "type": "image",
       "src": "Picture1-640x400.jpg",
       "styles": {
-        "max-width": "325px",
+        "maxWidth": "325px",
         "margin": "0 auto",
         "transform": "translate(25px, -2rem)"
       }
@@ -430,7 +433,7 @@
         "src": "RIO_TINTO_2.mp4",
         "config": { "sound": true, "loop": true },
         "styles": {
-          "max-width": "475px",
+          "maxWidth": "475px",
           "height": "auto",
           "right": "10%",
           "alignSelf": "center"
@@ -443,7 +446,7 @@
         "src": "DUCKS_2.mp4",
         "config": { "sound": false, "loop": true },
         "styles": {
-          "max-width": "275px",
+          "maxWidth": "275px",
           "height": "auto",
           "bottom": "3rem",
           "right": "20%"
@@ -554,8 +557,7 @@
           "color": "#e6bfbd",
           "bottom": "0",
           "right": "17.5%",
-          "margin": "0",
-          "paddingBottom": "2rem"
+          "margin": "0"
         },
         "src": "<p>I get delirious when ever you're near</p><p>Lose all self-cntrl, baby just    n't ste</p><p>WWh els get locked in </p><p>Stpid look on m.  f.    </p><p>It c mes to mking a pass</p><p>I just can't wi</p><p>I get del.    us when you hold m hd </p><p>B.     dy gets so wea  I can hrdly</p><p>My temperature's ru</p><p>Bby you g t to</p><p>Because if you d', I'm going to x</p><p>And grl I got lt</p><p>I get delirious w.    ever y</p><p>Girl yu gtta</p><p>I can't str</p><p>to much to tke</p><p>I in't g    no brke</p><p>tke m fr a ltle rde</p><p>rnd yr lk.</p><br><br>"
       }
