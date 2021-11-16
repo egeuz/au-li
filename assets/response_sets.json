@@ -85,7 +85,7 @@
       "id": "anim_g01",
       "type": "image",
       "effect": "double-image",
-      "src": ["battery_2_left.gif", "battery_2_right.gif"],
+      "src": ["battery_4_L.gif", "battery_4_R.gif"],
       "styles": {
         "display": "flex",
         "maxWidth": "500px",
@@ -188,7 +188,7 @@
       {
         "id": "r06m01",
         "type": "video",
-        "src": "BRINE_POOLS_2.mp4",
+        "src": "BRINE_POOLS_3.mp4",
         "config": { "sound": true, "loop": true },
         "styles": {
           "maxWidth": "350px",
@@ -501,7 +501,7 @@
       {
         "id": "r15m02",
         "type": "video",
-        "src": "SEE_YOU_AGAIN_2.mp4",
+        "src": "SEE_YOU_AGAIN_3.mp4",
         "config": { "sound": true, "loop": true },
         "styles": {
           "maxWidth": "400px",
