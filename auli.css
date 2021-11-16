@@ -297,7 +297,7 @@ body {
   animation: blink;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
-  animation-duration: 2s; /* default */
+  animation-duration: 0.75s; /* default */
 }
 
 .auli-scroll-frame {
@@ -342,18 +342,7 @@ body {
 }
 
 .auli-typing-blink .auli-blink {
-  display: inline-block;
-}
-
-/*** for wide screens with low height ***/
-@media (max-height: 800px) {
-  #auli-interface {
-    padding: 0 1rem 2rem;
-  }
-
-  /* #auli-animation {
-    margin-bottom: 0;
-  } */
+  min-width: 120px;
 }
 
 /* shadow effects */
@@ -367,6 +356,13 @@ body {
   background: #000;
   opacity: 0.9;
   filter: blur(40px);
+}
+
+/*** for wide screens with low height ***/
+@media (max-height: 800px) {
+  #auli-interface {
+    padding: 0 1rem 2rem;
+  }
 }
 
 /*** mobile only component styles ***/
@@ -384,6 +380,10 @@ body {
 
   .auli-typing-blink p {
     font-size: 1.5rem;
+  }
+
+  .auli-typing-blink .auli-blink {
+    min-width: 180px;
   }
 
   .flex-modal-content {
@@ -418,6 +418,10 @@ body {
 
   .auli-typing-blink p {
     font-size: 3rem;
+  }
+
+  .auli-typing-blink .auli-blink {
+    min-width: 360px;
   }
 
   .flex-modal-content {

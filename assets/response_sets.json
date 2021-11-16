@@ -41,21 +41,7 @@
       "src": "dancer_01_pacing.mp4",
       "config": { "loop": true }
     },
-    "modals": [
-      {
-        "id": "r01m01",
-        "type": "video",
-        "src": "The_Hand_2.mp4",
-        "config": { "loop": true },
-        "styles": {
-          "min-width": "180px",
-          "max-width": "15vw",
-          "max-height": "375px",
-          "alignSelf": "center",
-          "left": "2.5%"
-        }
-      }
-    ]
+    "modals": ""
   },
   {
     "setID": "02",
@@ -120,7 +106,7 @@
           "left": "48.5%",
           "margin": "1rem auto"
         },
-        "src": "<p>Long live the power of lithium! <br> Queen of rechargeable batteries shall reign for the future.</p><p>When it comes to making computer circuits, silicon is king. Contenders for the throne include optical switches, DNA, proteins, germanium and graphene. Each has legitimate grounds to be considered but has struggled in development, while silicon-based computers have relentlessly improved, such that the performance gap between silicon and its potential usurpers has widened.</p><p>A similar widening gap has occurred in rechargeable batteries. If silicon is the king of electronic circuits, lithium is the queen of batteries. I find it surprising that one element so thoroughly dominates battery technology but, like king silicon for circuits, queen lithium has properties that make it superior to all the alternatives.</p><p>Batteries comprise three essential components: the negative terminal (also known as the anode), the positive terminal (the cathode) and the interior soup of ions called the electrolyte, usually a liquid or gel. When the negative and positive terminals are connected through an external circuit such as your flashlight, the battery discharges by driving electrons from the negative terminal to the positive terminal, providing the energy to generate light. Inside the battery, the circuit is completed by the flow of positive ions through the electrolyte. In a lithium-ion battery, these positive ions are lithium atoms that have been stripped of an electron.</p><p>Most of the billions of dollars spent each year to develop better lithium-ion batteries are invested in improving the materials for the terminals and the electrolyte. The negative terminal has to act like a sponge, absorbing and storing as many positively charged lithium ions as possible. Graphite is most commonly used, but variations such as graphene that can absorb even more lithium ions without swelling are actively being sought. The positive terminal is often made from lithium cobalt oxide, though there are many alternatives in production and in development. The electrolyte includes lithium salts such as lithium hexafluorophosphate.</p><p>What makes lithium special? For starters, it is the lightest of all metals and the third-lightest element, sitting in the periodic table immediately after hydrogen and helium. Further, of the metals commonly used for batteries, lithium has the highest ‘working voltage’ – the voltage difference between the negative terminal and the positive terminal.</p><p>This combination of a high working voltage (up to 3.6 volts) and light weight contributes to lithium batteries having the highest energy storage per kilogram, making them ideal for mobile applications. Thanks to lithium-ion (Li-ion) batteries, a Tesla car can get away with a battery weight of 600 kg, compared with 4,000 kg or more if it were to rely on conventional lead acid batteries.</p><p>Unlike lead acid batteries, in use for more than a century, lithium-ion batteries can be discharged down to about 10% of their rated capacity without failure, and do so thousands of times. They do not carry the curse of the memory effect that reduces the working lifetime in nickel-cadmium (NiCd) and nickel-metal hydride (NiMH) batteries unless they are fully discharged before recharging. Further, lithium-ion batteries left sitting on the shelf will lose charge at a much slower rate than other battery chemistries.</p><p>Like any chemical at high concentrations, lithium is harmful to humans if ingested but is otherwise very low on the toxicity scale; in fact, it is so relatively harmless that for more than 50 years lithium carbonate salt has been routinely used as a medicine to treat bipolar disorder.</p>"
+        "src": "<p>Long live the power of lithium! <br> Queen of rechargeable batteries shall reign for the future.</p><p>Queen lithium has properties that make it superior to all the alternatives.</p><p>Batteries comprise three essential components: the negative terminal (the anode), the positive terminal (the cathode) and the interior soup of ions called the electrolyte, usually a liquid or gel. When the negative and positive terminals are connected through an external circuit such as your flashlight, the battery discharges by driving electrons from the negative terminal to the positive terminal, providing the energy to generate light. </p><p>The negative terminal has to act like a sponge, absorbing and storing as many positively charged lithium ions as possible. Graphite is most commonly used. The positive terminal is often made from lithium cobalt oxide. The electrolyte includes lithium salts such as lithium hexafluorophosphate.</p><p>What makes lithium special? It is the lightest of all metals and the third-lightest element, sitting in the periodic table immediately after hydrogen and helium. Further, lithium has the highest ‘working voltage’ – the voltage difference between the negative terminal and the positive terminal.</p><p>On the one hand, this combination of a high working voltage and light weight make lithium-ion (Li-ion) betteries ideal for mobile applications. Thanks to Li-ion batteries, a Tesla car can get away with a battery weight of 600 kg, compared with 4,000 kg or more if it were to rely on conventional lead acid batteries.</p><p>On the other hand, atop a long-dormant volcano in northern Nevada, workers are preparing to start blasting and digging out a giant pit that will serve as the first new large-scale lithium mine in the United States in more than a decade.</p><p>The project, known as Lithium Americas, has drawn protests from members of Native American tribes, ranchers and environmental groups because it is expected to use billions of gallons of precious ground water, contaminating it for 300 years, while leaving behind a giant mound of waste.</p><p>“Blowing up a mountain isn’t green, no matter how much marketing spin people put on it,” said Max Wilbert.</p>"
       }
     ]
   },
@@ -165,7 +151,7 @@
         "id": "r05m01",
         "type": "html",
         "effect": "typing-blink",
-        "src": "<div class='auli-typing'><p>hhhrrrrrrr >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> </p></div><div class='auli-blink'><p>THERE</p></div>",
+        "src": "<div class='auli-typing'><p>here>>>>>>>>>>>>>>>>>>>>>>>>>> </p></div><div class='auli-blink'><p>BAG OF ROCKS</p></div>",
         "styles": {
           "bottom": "0",
           "margin": "0"
@@ -236,9 +222,8 @@
       {
         "id": "r07m01",
         "type": "html",
-        "src": "<p>Invisible bodies, by definition, can be done away much more easily than visible ones. Since <a href='https://www.nytimes.com/2021/05/06/business/lithium-mining-race.html' target='_blank' rel='noopener noreferrer'>angels</a>, <a href='https://www.theguardian.com/commentisfree/2021/jun/14/electric-cost-lithium-mining-decarbonasation-salt-flats-chile' target='_blank' rel='noopener noreferrer'>ghosts</a>, <a href='https://www.greenbiz.com/article/lithium-mining-booming-heres-how-manage-its-impact' target='_blank' rel='noopener noreferrer'>demons</a>, <a href='https://www.investopedia.com/investing/lithium-mining-dirty-investment-or-sustainable-business/' target='_blank' rel='noopener noreferrer'>ancestors</a>, <a href='https://insideclimatenews.org/news/07112021/lithium-mining-thacker-pass-nevada-electric-vehicles-climate/' target='_blank' rel='noopener noreferrer'>ghouls</a> <a href='https://miningglobal.com/top10/5-largest-lithium-mining-companies-world' target='_blank' rel='noopener noreferrer'>and the like</a> take up no space in our empirical world, the liquidation of them involves <a href='https://www.theguardian.com/environment/2021/jan/03/child-labour-toxic-leaks-the-price-we-could-pay-for-a-greener-future' target='_blank' rel='noopener noreferrer'>no bloodletting</a>, leaves <a href='https://www.wired.co.uk/article/lithium-batteries-environment-impact' target='_blank' rel='noopener noreferrer'>no corpses</a>, and calls for <a href='https://www.amnesty.org/en/latest/news/2016/01/child-labour-behind-smart-phone-and-electric-car-batteries/' target='_blank' rel='noopener noreferrer'>no official inquiry</a>.  Whenever such <a href='https://www.greentechmedia.com/articles/read/green-battery-revolution-powering-social-and-environmental-risks' target='_blank' rel='noopener noreferrer'>invisible bodies</a> are being <a href='https://www.forbes.com/sites/michaelposner/2020/10/07/how-tesla-should-combat-child-labor-in-the-democratic-republic-of-the-congo/?sh=71eda1945cd0' target='_blank' rel='noopener noreferrer'>deleted from the 'chain of being'</a> long believed in by <a href='https://www.ft.com/content/c6909812-9ce4-11e9-9c06-a4640c9feebb' target='_blank' rel='noopener noreferrer'>a given people</a>, that <a href='https://www.humanium.org/en/the-impact-of-covid-19-on-child-labour-in-cobalt-mines-in-the-drc/' target='_blank' rel='noopener noreferrer'>act of erasure</a> is a sure sign that the aspiration to be recognized as 'modern' has gotten strong among them. <br><br> – William Lafleur</p>",
+        "src": "<p class='scroll-pinkblue'>Invisible bodies, by definition, can be done away much more easily than visible ones. Since <a href='http://jenliu.info/BOT/Lithium_Mining_Green_Friendly_NYT.txt' target='_blank' rel='noopener noreferrer'>angels</a>, <a href='http://jenliu.info/BOT/Rush_go_electric_Guardian.txt' target='_blank' rel='noopener noreferrer'>ghosts</a>, <a href='http://jenliu.info/BOT/Lithium_booming_Greenbiz.txt' target='_blank' rel='noopener noreferrer'>demons</a>, <a href='http://jenliu.info/BOT/Lithium_%20Dirty_Investment.txt' target='_blank' rel='noopener noreferrer'>ancestors</a>, <a href='http://jenliu.info/BOT/Plans_Biggest_Lithium.txt' target='_blank' rel='noopener noreferrer'>ghouls</a> <a href='http://jenliu.info/BOT/5_Largest_Lithium.txt' target='_blank' rel='noopener noreferrer'>and the like</a> take up no space in our empirical world, the liquidation of them involves <a href='http://jenliu.info/BOT/Child_toxic_economy_Guardian.txt' target='_blank' rel='noopener noreferrer'>no bloodletting</a>, leaves <a href='http://jenliu.info/BOT/Spiralling_WIRED.txt' target='_blank' rel='noopener noreferrer'>no corpses</a>, and calls for <a href='http://jenliu.info/BOT/Child_labour_batteries.txt' target='_blank' rel='noopener noreferrer'>no official inquiry</a>.  Whenever such <a href='http://jenliu.info/BOT/Trample_Indigenous_NR.txt' target='_blank' rel='noopener noreferrer'>invisible bodies</a> are being <a href='http://jenliu.info/BOT/Lithium_Free_Tibet.txt' target='_blank' rel='noopener noreferrer'>deleted from the 'chain of being'</a> long believed in by <a href='http://jenliu.info/BOT/Congo_electric_FT.txt' target='_blank' rel='noopener noreferrer'>a given people</a>, that <a href='http://jenliu.info/BOT/Indigenous_Poor_WP.txt' target='_blank' rel='noopener noreferrer'>act of erasure</a> is a sure sign that the aspiration to be recognized as 'modern' has gotten strong among them. <br><br> – William Lafleur</p>",
         "styles": {
-          "color": "#e6bfbd",
           "maxWidth": "500px",
           "right": "20%",
           "bottom": "3rem"
@@ -346,7 +331,7 @@
   {
     "setID": "11",
     "duration": 42000,
-    "keywords": "lithium, technology, computer, phone, tablet, social, email, DM, message, point, purpose, keyboard, screen, print, type, scan, email, mouse, click, eye, scroll, social, media, news, tiktok, facebook, instagram, electronic, gadget, digital, wire, cord, electric, spark, static, signal, laser, work, smart, engine, web, site, online, commerce, ebay, craigslist, brand, archive, server, digitize, digitization, content, nigeria, congo, ethiopia, tanzania, africa, uganda, algeria, morocc, sudan, turk, today, danc, poison, toxic, acid, process, factor, industr",
+    "keywords": "lithium, technology, computer, phone, tablet, social, email, DM, message, point, purpose, keyboard, screen, print, type, scan, email, mouse, click, eye, scroll, social, media, news, tiktok, facebook, instagram, electronic, gadget, digital, wire, cord, electric, spark, static, signal, laser, work, smart, engine, web, site, online, commerce, ebay, craigslist, brand, archive, server, digitize, digitization, content, nigeria, congo, ethiopia, tanzania, africa, uganda, algeria, morocc, sudan, turk, today, danc, poison, toxic, acid, process, factor, industr, batter",
     "animation": {
       "id": "anim_e01",
       "type": "video",
@@ -364,7 +349,7 @@
         "id": "r11m01",
         "type": "html",
         "effect": "blink",
-        "src": "<a href='http://jenliu.info/gold_loop_2.html' target='_blank' rel='noopener noreferrer'><p>“Dance you shall,” said he, “dance in your red shoes till you are pale and cold, till your skin shrivels up and you are a skeleton!</p><p>Dance you shall, from door to door, and where proud and wicked children live you shall knock, so that they may hear you and fear you!</p><p>Dance you shall, dance—!”</p><p>“Mercy!” cried Karen.</p></a>",
+        "src": "<a href='http://jenliu.info/gold_loop_2.html' target='_blank' rel='noopener noreferrer'><p>“Dance you shall,” said he, “dance in your red shoes till you are pale and cold, till your skin shrivels up and you are a skeleton! Dance you shall, from door to door, and where proud and wicked children like you shall knock, so that they may hear you and fear you! Dance you shall, dance—!” “Mercy!” cried Karen.</p></a>",
         "styles": {
           "maxWidth": "300px",
           "color": "#cfeded",
@@ -403,7 +388,7 @@
           "left": "55%",
           "color": "#cfeded"
         },
-        "src": "<p><p>LITHIUM SIDE EFFECTS</p><p>If you are between the ages of 18 and 60, take no other medication or have no other medical conditions, side effects you are more likely to experience include:</p><p>Fine hand tremor, frequent urination, and mild thirst commonly occur during lithium initiation. Sometimes these effects may persist throughout treatment.</p><p>Nausea during initiation is common but usually subsides with continued administration.</p><p>Diarrhea, vomiting, drowsiness, muscular weakness, loss of appetite, and coordination difficulties may be an early sign of lithium toxicity. Dizziness, blurred vision, ringing in the ears and excessive production of dilute urine may occur with higher (toxic) lithium levels. Seek urgent medical advice.</p><p>Lithium may also cause irregular heartbeat, drying and thinning of hair, alopecia, dry mouth, weight gain, itchiness, and other side effects. Long-term use may lead to kidney disease, high blood calcium levels, hyperparathyroidism, hypothyroidism, or other thyroid problems.</p></p>"
+        "src": "<p><p>LITHIUM SIDE EFFECTS</p><p>If you are between the ages of 18 and 60, side effects you are more likely to experience include:</p><p>Fine hand tremor, frequent urination, and mild thirst commonly occur during lithium initiation. Sometimes these effects may persist.</p><p>Nausea is common but usually subsides.</p><p>Diarrhea, vomiting, drowsiness, muscular weakness, loss of appetite, and coordination difficulties may be an early sign of lithium toxicity.</p><p>Toxicity assaults at every turn; earth and water are contaminated with industrial runoff, and the air is brown with a noxious haze.</p><p>She inhales lethal mineral dust every time she takes a breath</p><p>Dizziness, blurred vision, ringing in the ears and excessive production of dilute urine may occur with higher (toxic) lithium levels. Seek urgent medical advice.</p></p>"
       }
     ]
   },
@@ -431,7 +416,7 @@
         "id": "r13m01",
         "type": "video",
         "src": "RIO_TINTO_2.mp4",
-        "config": { "sound": true, "loop": true },
+        "config": { "sound": true, "loop": true, "volume": 0.45 },
         "styles": {
           "maxWidth": "475px",
           "height": "auto",
@@ -444,7 +429,7 @@
         "id": "r13m02",
         "type": "video",
         "src": "DUCKS_2.mp4",
-        "config": { "sound": false, "loop": true },
+        "config": { "sound": true, "loop": true },
         "styles": {
           "maxWidth": "275px",
           "height": "auto",
@@ -537,7 +522,8 @@
       "type": "image",
       "src": "8IuC.gif",
       "styles": {
-        "marginTop": "7.5vh"
+        "marginTop": "7.5vh",
+        "transform": "scale(1.35)"
       }
     },
     "dancer": {
@@ -559,7 +545,7 @@
           "right": "17.5%",
           "margin": "0"
         },
-        "src": "<p>I get delirious when ever you're near</p><p>Lose all self-cntrl, baby just    n't ste</p><p>WWh els get locked in </p><p>Stpid look on m.  f.    </p><p>It c mes to mking a pass</p><p>I just can't wi</p><p>I get del.    us when you hold m hd </p><p>B.     dy gets so wea  I can hrdly</p><p>My temperature's ru</p><p>Bby you g t to</p><p>Because if you d', I'm going to x</p><p>And grl I got lt</p><p>I get delirious w.    ever y</p><p>Girl yu gtta</p><p>I can't str</p><p>to much to tke</p><p>I in't g    no brke</p><p>tke m fr a ltle rde</p><p>rnd yr lk.</p><br><br>"
+        "src": "<p><em>I get delirious whenever you're near</em></p><br><p>The wells feed thick, black hoses that stretch like tentacles for miles across the salt crust. The hoses, drawing brine water from hundreds of feet underground, empty into a series of rectangular evaporation ponds. The ponds cover almost two square miles and are filled with water ranging in color from turquoise to azure blue, like views from different tropical beaches.</p><br><p><em>Body gets so weak I can hardly stand</em></p><br><p>In May 2016, hundreds of protestors threw dead fish onto the streets of Tagong, Tibet. They had plucked them from the waters of the Liqi river, masses of dead fish on the surface. Some reported seeing cow and yak carcasses floating downstream, dead from drinking the water.</p><br><p><em>The room, the room, the room s spnnng rnd n rnd</em></p>"
       }
     ]
   }

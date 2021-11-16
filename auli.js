@@ -64,6 +64,7 @@ function initAssets() {
     // video.loop = config && config.loop ? config.loop : false;
     video.loop = true;
     video.muted = config && config.sound ? !config.sound : true;
+    video.volume = config && config.volume ? config.volume : 1;
     video.preload = 'auto';
     video.load();
     return video;
